@@ -5,7 +5,12 @@ import { Container, Typography, Box } from '@mui/material';
 const Home = () => {
   return (
     <Container>
-      <Box mt={4}>
+      <Box mt={4} display="flex" flexDirection="column" alignItems="center">
+        {/* Add your image here using a public path */}
+        <Box mb={4}>
+          <img src="/profile.jpg" alt="Alexander Fields" style={{ width: '150px', borderRadius: '50%' }} />
+        </Box>
+        
         <Typography variant="h4" gutterBottom>Welcome to My Portfolio</Typography>
         <Typography variant="body1" paragraph>
           Hi, I'm Alexander Fields, a software engineer with a passion for backend development, ETL processes, API engineering, and embedded systems. I'm always learning and currently expanding my skills through LinkedIn Learning.
