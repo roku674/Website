@@ -59,6 +59,9 @@ const Experience = () => {
             <ListItemText primary="Managed the billing API and database, leveraging automation tools like Jenkins and Spinnaker for testing and deployment." />
           </ListItem>
           <ListItem>
+            <ListItemText primary="Refactored old Visual Basic website into Node.js/Java backend and Gatsby/Drupal js front end." />
+          </ListItem>
+          <ListItem>
             <ListItemText primary="Organized workflow via Agile methodologies under the management of a Scrum Master." />
           </ListItem>
           <ListItem>
@@ -129,9 +132,6 @@ const Experience = () => {
 <List>
   <ListItem>
     <ListItemText primary="Designed and edited signal plans, grading and erosion plans, and master plans using AutoCad." />
-  </ListItem>
-  <ListItem>
-    <ListItemText primary="Worked under Abdul Amer on various civil engineering projects." />
   </ListItem>
 </List>
 
