@@ -9,7 +9,15 @@ const Contact = () => {
         <Typography variant="h4" gutterBottom>Contact Me</Typography>
         <List>
           <ListItem>
-            <ListItemText primary="Email: roku674@gmail.com" />
+          <ListItemText
+            primary={
+              <>
+              Email: <a href="mailto:roku674@gmail.com">roku674@gmail.com</a>,{' '}
+              <a href="mailto:me@alexanderfields.me">me@alexanderfields.me</a>,{' '}
+              <a href="mailto:fields.alexander@perilousgames.com">fields.alexander@perilousgames.com</a>
+              </>
+            }
+          />
           </ListItem>
           <ListItem>
             <ListItemText primary="LinkedIn: " />
