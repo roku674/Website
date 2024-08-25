@@ -29,6 +29,7 @@ COPY --from=build /app/build .
 RUN npm install -g serve
 
 # Expose port 3000 to the Railway infrastructure
+ENV PORT=$PORT
 EXPOSE $PORT
 
 # Start the application on port specified by the $PORT environment variable
