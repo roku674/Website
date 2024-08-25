@@ -8,13 +8,15 @@ const Experience = () => {
       <Box mt={4} display="flex" flexDirection="column" alignItems="center">
         {/* Add your image here using the public path */}
         <Box mb={4}>
-          <img src="/profile.jpg" alt="Alexander Fields" style={{ width: '150px', borderRadius: '50%' }} />
+          <img src="/pictures/suitme.jpg" alt="Alexander Fields" style={{ width: '150px', borderRadius: '50%' }} />
         </Box>
 
         <Typography variant="h4" gutterBottom>Professional Experience</Typography>
 
         {/* Experience at Optimized Payments */}
-        <Typography variant="h5" gutterBottom>Software Engineer | Optimized Payments</Typography>
+        <Typography variant="h5" gutterBottom>
+  Software Engineer | <a href="https://optimizedpayments.com" target="_blank" rel="noopener noreferrer">Optimized Payments</a>
+</Typography>
         <Typography variant="body1" paragraph>
           November 2022 - Present
         </Typography>
@@ -40,7 +42,9 @@ const Experience = () => {
         </List>
 
         {/* Experience at MagMutual */}
-        <Typography variant="h5" gutterBottom>Software Engineer | MagMutual</Typography>
+        <Typography variant="h5" gutterBottom>
+  Software Engineer | <a href="https://magmutual.com" target="_blank" rel="noopener noreferrer">MagMutual</a>
+</Typography>
         <Typography variant="body1" paragraph>
           March 2021 – November 2022
         </Typography>
@@ -63,7 +67,9 @@ const Experience = () => {
         </List>
 
         {/* Project at Georgia Southern University */}
-        <Typography variant="h5" gutterBottom>Graduation Project | Georgia Southern University</Typography>
+        <Typography variant="h5" gutterBottom>
+  Graduation Project | <a href="https://www.georgiasouthern.edu/" target="_blank" rel="noopener noreferrer">Georgia Southern University</a>
+</Typography>
         <Typography variant="body1" paragraph>
           SOSA (Subjective Objective Stimulus Assessment)
         </Typography>
@@ -80,7 +86,9 @@ const Experience = () => {
         </List>
 
         {/* Personal Project */}
-        <Typography variant="h5" gutterBottom>Perilous Games | Personal Project</Typography>
+        <Typography variant="h5" gutterBottom>
+  <a href="https://perilousgames.com" target="_blank" rel="noopener noreferrer">Perilous Games</a> | Personal Project
+</Typography>
         <List>
           <ListItem>
             <ListItemText primary="Developed a free-to-play Massive Multiplayer Online Role-Playing game called Ad Astra." />
@@ -97,7 +105,9 @@ const Experience = () => {
         </List>
 
         {/* Internship Experience */}
-        <Typography variant="h5" gutterBottom>Intern | Arcadis U.S., Smyrna, GA</Typography>
+        <Typography variant="h5" gutterBottom>
+  Intern | <a href="https://www.arcadis.com/en-us" target="_blank" rel="noopener noreferrer">Arcadis U.S., Smyrna, GA</a>
+</Typography>
         <Typography variant="body1" paragraph>
           May – August 2014 & 2015
         </Typography>
@@ -109,10 +119,27 @@ const Experience = () => {
             <ListItemText primary="Coded and tested traffic plans in C++/DOS for traffic signal timing engineers in the traffic lab." />
           </ListItem>
         </List>
+        {/* New Internship Experience */}
+<Typography variant="h5" gutterBottom>
+  Intern | <a href="https://areng.com/" target="_blank" rel="noopener noreferrer">A&R Engineering</a>
+</Typography>
+<Typography variant="body1" paragraph>
+  May – August 2016 & 2017
+</Typography>
+<List>
+  <ListItem>
+    <ListItemText primary="Designed and edited signal plans, grading and erosion plans, and master plans using AutoCad." />
+  </ListItem>
+  <ListItem>
+    <ListItemText primary="Worked under Abdul Amer on various civil engineering projects." />
+  </ListItem>
+</List>
 
         {/* Education */}
         <Typography variant="h4" gutterBottom>Education</Typography>
-        <Typography variant="h5" gutterBottom>B.S. Computer Science | Georgia Southern University</Typography>
+        <Typography variant="h5" gutterBottom>
+  B.S. Computer Science | <a href="https://www.georgiasouthern.edu/" target="_blank" rel="noopener noreferrer">Georgia Southern University</a>
+</Typography>
         <Typography variant="body1" paragraph>
           May 2020
         </Typography>
@@ -126,7 +153,7 @@ const Experience = () => {
          {/* Add the Job Timeline Graph Image */}
          <Typography variant="h4" gutterBottom>Job Timeline</Typography>
         <Box mb={4}>
-          <img src="/experience.png" alt="Job Timeline Graph" style={{ width: '100%', maxWidth: '600px' }} />
+          <img src="/pictures/experience.png" alt="Job Timeline Graph" style={{ width: '100%', maxWidth: '600px' }} />
         </Box>
       </Box>
     </Container>

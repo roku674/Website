@@ -8,8 +8,8 @@
 /* Set a global font and background color */
 body {
     font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
-    background-color: #f5f5f5; /* Light background for a clean look */
-    color: #333; /* Dark color for text */
+    background-color: #055a72; /* Light background for a clean look */
+    color: #dde0d3; /* Dark color for text */
     line-height: 1.6; /* Improved readability */
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -17,11 +17,11 @@ body {
 /* Global link styles */
 a {
     text-decoration: none;
-    color: #3498db; /* Blue color for links */
+    color: #fde047; /* Yellow color for links */
 }
 
 a:hover {
-    color: #1abc9c; /* Lighter color on hover */
+    color: #18d4af; /* Lighter color on hover */
 }
 
 /* Global button styles */
@@ -31,19 +31,19 @@ button {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #3498db;
+    background-color: #010d14;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #1abc9c; /* Change color on hover */
+    background-color: #1e947c; /* Change color on hover */
 }
 
 /* Global styles for headings */
 h1, h2, h3, h4, h5, h6 {
-    color: #222; /* Darker color for headings */
+    color: #ffffff; /* Darker color for headings */
     margin-bottom: 15px; /* Space below headings */
 }
 
