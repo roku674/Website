@@ -5,10 +5,10 @@ FROM node:18-alpine AS build
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the container
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies (npm ci is recommended for a clean install)
+RUN npm ci
 
 # Copy the rest of the application to the container
 COPY . .
