@@ -1,0 +1,21 @@
+name: Check Forbidden Files
+
+on: pull_request
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check for forbidden file changes
+      run: |
+        FORBIDDEN_FILES=(".env")
+        for FILE in "${FORBIDDEN_FILES[@]}"; do
+          echo "Checking $FILE"
+          if git diff --name-only origin/${{ github.base_ref }}..${{ github.sha }} | grep -q "^$FILE$"; then
+            echo "Error: You are trying to merge changes to a forbidden file: $FILE"
+            exit 1
+          fi
+        done
