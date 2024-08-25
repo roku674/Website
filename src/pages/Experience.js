@@ -126,7 +126,7 @@ const Experience = () => {
          {/* Add the Job Timeline Graph Image */}
          <Typography variant="h4" gutterBottom>Job Timeline</Typography>
         <Box mb={4}>
-          <img src="/image.png" alt="Job Timeline Graph" style={{ width: '100%', maxWidth: '600px' }} />
+          <img src="/experience.png" alt="Job Timeline Graph" style={{ width: '100%', maxWidth: '600px' }} />
         </Box>
       </Box>
     </Container>
