@@ -4,10 +4,10 @@ FROM node:18-alpine AS build
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json to the container
+# Copy package.json
 COPY package.json ./
 
-# Install dependencies and create package-lock.json
+# Install dependencies
 RUN npm install
 
 # Copy the rest of the application to the container
@@ -16,14 +16,20 @@ COPY . .
 # Build the React application for production
 RUN npm run build
 
-# Use an Nginx image to serve the built application
-FROM nginx:alpine
+# Use a lightweight Node server to serve the React application
+FROM node:18-alpine
 
-# Copy the built files from the previous stage to Nginx's default public directory
-COPY --from=build /app/build /usr/share/nginx/html
+# Set the working directory in the container
+WORKDIR /app
 
-# Expose port 
+# Copy the built files from the previous stage
+COPY --from=build /app/build .
+
+# Install a lightweight HTTP server for serving static content
+RUN npm install -g serve
+
+# Expose port 3000 to the Railway infrastructure
 EXPOSE 3000
 
-# Start Nginx server
-CMD ["nginx", "-g", "daemon off;"]
+# Start the application on port 3000
+CMD ["serve", "-s", ".", "-l", "3000"]
