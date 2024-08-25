@@ -75,6 +75,14 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline; /* Add underline on hover */
 }
 
+.navbar-desktop {
+    display: flex;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
 /* Footer Styles */
 .footer {
     margin-top: 40px; /* Adds space above the footer */
@@ -113,5 +121,22 @@ h1, h2, h3, h4, h5, h6 {
 
     a {
         font-size: 16px; /* Adjust font size for links on mobile */
+    }
+
+    .navbar-desktop {
+        display: none; /* Hide desktop navbar on mobile */
+    }
+
+    .navbar-mobile {
+        display: block; /* Show mobile menu button */
+    }
+
+    .navbar-drawer .MuiList-root {
+        padding: 0;
+    }
+
+    .navbar-drawer .MuiListItem-root {
+        padding: 10px 20px;
+        text-align: center;
     }
 }

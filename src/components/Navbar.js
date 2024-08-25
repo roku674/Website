@@ -1,22 +1,68 @@
 // src/components/Navbar.js
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import '../index.css'; // Import the CSS file
 
 const Navbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const drawer = (
+    <List className="navbar-drawer">
+      <ListItem button component={Link} to="/" onClick={handleDrawerToggle}>
+        <ListItemText primary="Home" />
+      </ListItem>
+      <ListItem button component={Link} to="/experience" onClick={handleDrawerToggle}>
+        <ListItemText primary="Experience" />
+      </ListItem>
+      <ListItem button component={Link} to="/projects" onClick={handleDrawerToggle}>
+        <ListItemText primary="Projects" />
+      </ListItem>
+      <ListItem button component={Link} to="/contact" onClick={handleDrawerToggle}>
+        <ListItemText primary="Contact" />
+      </ListItem>
+    </List>
+  );
+
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Alexander Fields
-        </Typography>
-        <Button color="inherit" component={Link} to="/">Home</Button>
-        <Button color="inherit" component={Link} to="/experience">Experience</Button>
-        <Button color="inherit" component={Link} to="/projects">Projects</Button>
-        <Button color="inherit" component={Link} to="/contact">Contact</Button>
-      </Toolbar>
-    </AppBar>
+    <>
+      <AppBar position="static" className="navbar">
+        <Toolbar>
+          <Typography variant="h6" component="div" className="navbar-title">
+            Alexander Fields
+          </Typography>
+          <div className="navbar-desktop">
+            <Button color="inherit" component={Link} to="/">Home</Button>
+            <Button color="inherit" component={Link} to="/experience">Experience</Button>
+            <Button color="inherit" component={Link} to="/projects">Projects</Button>
+            <Button color="inherit" component={Link} to="/contact">Contact</Button>
+          </div>
+          <IconButton 
+            color="inherit" 
+            edge="end" 
+            onClick={handleDrawerToggle} 
+            className="navbar-mobile">
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        className="navbar-drawer"
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
+      >
+        {drawer}
+      </Drawer>
+    </>
   );
 };
 
