@@ -54,3 +54,64 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 20px;
 }
+
+/* Navbar Styles */
+.navbar {
+    background-color: #1976d2; /* Matches default AppBar color */
+    color: white;
+}
+
+.navbar-title {
+    flex-grow: 1; /* Makes the title take up as much space as possible */
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px; /* Space between buttons */
+}
+
+.navbar-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 40px; /* Adds space above the footer */
+    padding: 20px 0; /* Adds space inside the footer */
+    background-color: #333; /* Dark background color for the footer */
+    color: white; /* White text color for the footer */
+    text-align: center; /* Center-aligns the text */
+}
+
+.footer-text {
+    font-size: 14px; /* Adjust font size for footer text */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    /* Adjust font sizes for smaller screens */
+    body {
+        font-size: 14px;
+    }
+
+    .navbar-link {
+        margin-left: 10px; /* Reduce space between navbar links */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 10px; /* Reduce spacing below headings */
+    }
+
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .footer {
+        padding: 15px 0; /* Adjust footer padding */
+    }
+
+    a {
+        font-size: 16px; /* Adjust font size for links on mobile */
+    }
+}

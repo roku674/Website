@@ -12,7 +12,7 @@ const Home = () => {
         </Box>
 
         {/* Header and personal introduction */}
-        <Typography variant="h4" gutterBottom>Welcome to My Portfolio</Typography>
+        <Typography variant="h4" gutterBottom>Welcome to My Website</Typography>
 
         {/* Personal Description with images */}
         <Box display="flex" flexDirection="column" alignItems="flex-start" width="100%">
