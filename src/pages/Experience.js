@@ -146,7 +146,8 @@ const Experience = () => {
 
         {/* Technical Skills */}
         <Typography variant="h4" gutterBottom>Technical Skills</Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph><a href="https://drive.google.com/drive/folders/1bhHUa6VtaJY_iB_qCT3QM8G_A9AxCDWt?usp=sharing">All Certifications
+      </a><br></br>
           Scrum Master Certified, C# / VB / ASP.NET, .Net Core, React / Node.js, Python, SQL, Oracle SQL Developer, Java, C++, HTML, CSS, JavaScript, Unity, GitHub, Jira, Azure, AWS, Jenkins, Spinnaker, and more.
         </Typography>
 
