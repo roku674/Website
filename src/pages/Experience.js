@@ -1,6 +1,6 @@
-// src/pages/Experience.js
 import React from 'react';
 import { Container, Typography, Box, List, ListItem, ListItemText } from '@mui/material';
+import '../index.css'; // Import your CSS file
 
 const Experience = () => {
   return (
@@ -8,22 +8,26 @@ const Experience = () => {
       <Box mt={4} display="flex" flexDirection="column" alignItems="center">
         {/* Add your image here using the public path */}
         <Box mb={4}>
-          <img src="/pictures/suitme.jpg" alt="Alexander Fields" style={{ width: '150px', borderRadius: '50%', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }} />
+          <img src="/pictures/suitme.jpg" alt="Alexander Fields" className="profile-image" />
         </Box>
 
         {/* Professional Experience Header */}
-        <Typography variant="h4" align="center" gutterBottom>Professional Experience</Typography>
+        <Typography variant="h4" align="center" className="center-text" gutterBottom>
+          Professional Experience
+        </Typography>
         
         {/* Job Timeline Graph */}
         <Box mb={4} className="bubble">
-          <Typography variant="h4" align="center" gutterBottom>Job Timeline</Typography>
-          <img src="/pictures/experience.png" alt="Job Timeline Graph" style={{ width: '100%', maxWidth: '600px', borderRadius: '16px' }} />
+          <Typography variant="h4" align="center" gutterBottom>
+            Job Timeline
+          </Typography>
+          <img src="/pictures/experience.png" alt="Job Timeline Graph" className="timeline-image" />
         </Box>
         
         {/* Experience at Optimized Payments */}
         <Box className="bubble">
           <Typography variant="h5" align="center" gutterBottom>
-            Software Engineer | <a href="https://optimizedpayments.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Optimized Payments</a>
+            Full Stack Engineer | <a href="https://optimizedpayments.com" target="_blank" rel="noopener noreferrer" className="experience-link">Optimized Payments</a>
           </Typography>
           <Typography variant="body1" paragraph>
             November 2022 - Present
@@ -53,7 +57,7 @@ const Experience = () => {
         {/* Experience at MagMutual */}
         <Box className="bubble">
           <Typography variant="h5" align="center" gutterBottom>
-            Software Engineer | <a href="https://magmutual.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>MagMutual</a>
+            API Engineer | <a href="https://magmutual.com" target="_blank" rel="noopener noreferrer" className="experience-link">MagMutual</a>
           </Typography>
           <Typography variant="body1" paragraph>
             March 2021 – November 2022
@@ -83,7 +87,7 @@ const Experience = () => {
         {/* Graduation Project at Georgia Southern University */}
         <Box className="bubble">
           <Typography variant="h5" align="center" gutterBottom>
-            Graduation Project | <a href="https://www.georgiasouthern.edu/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Georgia Southern University</a>
+            Graduation Project | <a href="https://www.georgiasouthern.edu/" target="_blank" rel="noopener noreferrer" className="experience-link">Georgia Southern University</a>
           </Typography>
           <Typography variant="body1" paragraph>
             SOSA (Subjective Objective Stimulus Assessment)
@@ -104,7 +108,7 @@ const Experience = () => {
         {/* Personal Project at Perilous Games */}
         <Box className="bubble">
           <Typography variant="h5" align="center" gutterBottom>
-            <a href="https://perilousgames.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Perilous Games</a> | Personal Project
+            <a href="https://perilousgames.com" target="_blank" rel="noopener noreferrer" className="experience-link">Perilous Games</a> | Personal Project
           </Typography>
           <List>
             <ListItem>
@@ -125,7 +129,7 @@ const Experience = () => {
         {/* Internship Experience at Arcadis U.S. */}
         <Box className="bubble">
           <Typography variant="h5" align="center" gutterBottom>
-            Intern | <a href="https://www.arcadis.com/en-us" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Arcadis U.S., Smyrna, GA</a>
+            Intern | <a href="https://www.arcadis.com/en-us" target="_blank" rel="noopener noreferrer" className="experience-link">Arcadis U.S., Smyrna, GA</a>
           </Typography>
           <Typography variant="body1" paragraph>
             May – August 2014 & 2015
@@ -143,7 +147,7 @@ const Experience = () => {
         {/* Internship Experience at A&R Engineering */}
         <Box className="bubble">
           <Typography variant="h5" align="center" gutterBottom>
-            Intern | <a href="https://areng.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>A&R Engineering</a>
+            Intern | <a href="https://areng.com/" target="_blank" rel="noopener noreferrer" className="experience-link">A&R Engineering</a>
           </Typography>
           <Typography variant="body1" paragraph>
             May – August 2016 & 2017
@@ -159,7 +163,7 @@ const Experience = () => {
         <Box className="bubble">
           <Typography variant="h4" align="center" gutterBottom>Education</Typography>
           <Typography variant="h5" align="center" gutterBottom>
-            B.S. Computer Science | <a href="https://www.georgiasouthern.edu/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Georgia Southern University</a>
+            B.S. Computer Science | <a href="https://www.georgiasouthern.edu/" target="_blank" rel="noopener noreferrer" className="experience-link">Georgia Southern University</a>
           </Typography>
           <Typography variant="body1" paragraph>
             May 2020
@@ -170,7 +174,7 @@ const Experience = () => {
         <Box className="bubble">
           <Typography variant="h4" align="center" gutterBottom>Technical Skills</Typography>
           <Typography variant="body1" paragraph>
-            <a href="https://drive.google.com/drive/folders/1bhHUa6VtaJY_iB_qCT3QM8G_A9AxCDWt?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>All Certifications</a><br />
+            <a href="https://drive.google.com/drive/folders/1bhHUa6VtaJY_iB_qCT3QM8G_A9AxCDWt?usp=sharing" target="_blank" rel="noopener noreferrer" className="experience-link">All Certifications</a><br />
             Scrum Master Certified, C# / VB / ASP.NET, .Net Core, React / Node.js, Python, SQL, Oracle SQL Developer, Java, C++, HTML, CSS, JavaScript, Unity, GitHub, Jira, Azure, AWS, Jenkins, Spinnaker, and more.
           </Typography>
         </Box>
