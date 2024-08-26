@@ -1,52 +1,27 @@
-# Backend stage
-FROM node:18-alpine AS backend
+# Use Node.js 18 as the base image
+FROM node:18-alpine AS base
 
-WORKDIR /app/backend
+# Set working directory
+WORKDIR /app
 
+# Install dependencies for both backend and frontend
 COPY ./backend/package.json ./backend/
-
-RUN npm install
-
-COPY ./backend .
-
-# Frontend stage
-FROM node:18-alpine AS frontend
-
-WORKDIR /app/frontend
-
 COPY ./frontend/package.json ./frontend/
 
-RUN npm install
+RUN npm install -g concurrently
+RUN cd backend && npm install
+RUN cd frontend && npm install
 
-COPY ./frontend .
+# Copy all backend and frontend files
+COPY ./backend ./backend
+COPY ./frontend ./frontend
 
-RUN npm run build
-
-# Production stage
-FROM node:18-alpine
-
-WORKDIR /app
-
-# Copy backend from build stage
-COPY --from=backend /app/backend /app/backend
-
-# Copy frontend build files from build stage
-COPY --from=frontend /app/frontend/build /app/frontend/build
-
-# Install serve globally to serve React frontend
-RUN npm install -g serve
-
-# Install backend dependencies (again, due to different contexts)
-WORKDIR /app/backend
-RUN npm install
+# Build the frontend
+RUN cd frontend && npm run build
 
 # Expose ports for backend and frontend
-EXPOSE 5000 3000
+EXPOSE 5000
+EXPOSE 3000
 
-# Set the environment variables
-ENV PORT 3000
-
-# Use concurrently to run both backend and frontend
-WORKDIR /app
-
-CMD ["npx", "concurrently", "\"node backend/server.js\"", "\"serve -s frontend/build -l 3000\""]
+# Start both backend and frontend using concurrently
+CMD ["concurrently", "\"npm start --prefix backend\"", "\"serve -s frontend/build -l 3000\""]
