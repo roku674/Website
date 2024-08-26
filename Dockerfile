@@ -1,27 +1,45 @@
-# Use Node.js 18 as the base image
-FROM node:18-alpine AS base
+# Use an official Node.js runtime as a parent image
+FROM node:18-alpine AS build
 
-# Set working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Install dependencies for both backend and frontend
-COPY ./backend/package.json ./backend/
-COPY ./frontend/package.json ./frontend/
+# Copy package.json and package-lock.json to install dependencies
+COPY frontend/package*.json ./frontend/
+COPY backend/package*.json ./backend/
+COPY proxy/package*.json ./proxy/
 
-RUN npm install -g concurrently
-RUN cd backend && npm install
-RUN cd frontend && npm install
+# Install dependencies for all services
+RUN cd frontend && npm install && cd ..
+RUN cd backend && npm install && cd ..
+RUN cd proxy && npm install && cd ..
 
-# Copy all backend and frontend files
-COPY ./backend ./backend
-COPY ./frontend ./frontend
+# Copy all the files for each service
+COPY frontend ./frontend
+COPY backend ./backend
+COPY proxy ./proxy
 
-# Build the frontend
-RUN cd frontend && npm run build
+# Build the frontend React application for production
+RUN cd frontend && npm run build && cd ..
 
-# Expose ports for backend and frontend
-EXPOSE 5000
-EXPOSE 3000
+# Use a lightweight Node server to serve the React application
+FROM node:18-alpine
 
-# Start both backend and frontend using concurrently
-CMD ["concurrently", "\"npm start --prefix backend\"", "\"serve -s frontend/build -l 3000\""]
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the backend and proxy files
+COPY --from=build /app/backend ./backend
+COPY --from=build /app/proxy ./proxy
+
+# Copy the built frontend files to serve
+COPY --from=build /app/frontend/build ./frontend/build
+
+# Install a lightweight HTTP server for serving static content
+RUN npm install -g serve
+
+# Expose necessary ports
+EXPOSE 3000 3001 3002
+
+# Start all services
+CMD ["sh", "-c", "serve -s ./frontend/build -l 3000 & node backend/server.js & node proxy/proxy.js"]
