@@ -1,142 +1,402 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+html {
+    box-sizing: border-box
 }
 
-/* Set a global font and background color */
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
 body {
-    font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
-    background-color: #055a72; /* Light background for a clean look */
-    color: #dde0d3; /* Dark color for text */
-    line-height: 1.6; /* Improved readability */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    background-color: #8dc6d6; /* Original body background color */
+    color: #dde0d3; /* Original text color */
 }
 
-/* Global link styles */
-a {
-    text-decoration: none;
-    color: #fde047; /* Yellow color for links */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block
 }
 
-a:hover {
-    color: #18d4af; /* Lighter color on hover */
+summary {
+    display: list-item
 }
 
-/* Global button styles */
-button {
-    font-family: inherit; /* Use the same font as the body */
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #010d14;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+audio, canvas, progress, video {
+    display: inline-block
 }
 
-button:hover {
-    background-color: #1e947c; /* Change color on hover */
+progress {
+    vertical-align: baseline
 }
 
-/* Global styles for headings */
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff; /* Darker color for headings */
-    margin-bottom: 15px; /* Space below headings */
-}
-
-/* Global styles for containers */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: #1976d2; /* Matches default AppBar color */
-    color: white;
-}
-
-.navbar-title {
-    flex-grow: 1; /* Makes the title take up as much space as possible */
-}
-
-.navbar-link {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px; /* Space between buttons */
-}
-
-.navbar-link:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
-.navbar-desktop {
-    display: flex;
-}
-
-.navbar-mobile {
+audio:not([controls]) {
     display: none;
+    height: 0
 }
 
-/* Footer Styles */
-.footer {
-    margin-top: 40px; /* Adds space above the footer */
-    padding: 20px 0; /* Adds space inside the footer */
-    background-color: #333; /* Dark background color for the footer */
-    color: white; /* White text color for the footer */
-    text-align: center; /* Center-aligns the text */
+[hidden], template {
+    display: none
 }
 
-.footer-text {
-    font-size: 14px; /* Adjust font size for footer text */
+a {
+    background-color: transparent;
+    color: #fde047; /* Original link color */
+    text-decoration: none;
 }
 
-/* Responsive styles for mobile */
-@media (max-width: 768px) {
-    /* Adjust font sizes for smaller screens */
-    body {
-        font-size: 14px;
-    }
+a:active, a:hover {
+    outline-width: 0;
+    color: #18d4af; /* Original link hover color */
+}
 
-    .navbar-link {
-        margin-left: 10px; /* Reduce space between navbar links */
-    }
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
 
-    h1, h2, h3, h4, h5, h6 {
-        margin-bottom: 10px; /* Reduce spacing below headings */
-    }
+b, strong {
+    font-weight: bolder
+}
 
-    .container {
-        padding: 10px; /* Reduce padding on smaller screens */
-    }
+dfn {
+    font-style: italic
+}
 
-    .footer {
-        padding: 15px 0; /* Adjust footer padding */
-    }
+mark {
+    background: #ff0;
+    color: #000
+}
 
-    a {
-        font-size: 16px; /* Adjust font size for links on mobile */
-    }
+small {
+    font-size: 80%
+}
 
-    .navbar-desktop {
-        display: none; /* Hide desktop navbar on mobile */
-    }
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
 
-    .navbar-mobile {
-        display: block; /* Show mobile menu button */
-    }
+sub {
+    bottom: -0.25em
+}
 
-    .navbar-drawer .MuiList-root {
-        padding: 0;
-    }
+sup {
+    top: -0.5em
+}
 
-    .navbar-drawer .MuiListItem-root {
-        padding: 10px 20px;
-        text-align: center;
-    }
+figure {
+    margin: 1em 40px
+}
+
+img {
+    border-style: none
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+/* Add this CSS to your stylesheet (e.g., src/styles.css) */
+.bubble {
+    background-color: #055a72;; /* New color for bubbles */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 24px; /* Padding inside the bubble */
+    margin-bottom: 20px; /* Space between bubbles */
+    color: #dde0d3; /* Keep text color consistent */
+}
+
+button, input, select, textarea, optgroup {
+    font: inherit;
+    margin: 0
+}
+
+optgroup {
+    font-weight: bold
+}
+
+button, input {
+    overflow: visible
+}
+
+button, select {
+    text-transform: none
+}
+
+button, [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox], [type=radio] {
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+/* End extract */
+html, body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 36px
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    color: #ffffff; /* Original heading color */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.w3-btn, .w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff; /* Original button text color */
+    background-color: #010d14; /* Original button background color */
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.w3-btn:hover, .w3-button:hover {
+    background-color: #1e947c; /* Original button hover background color */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.w3-disabled, .w3-btn:disabled, .w3-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.w3-badge, .w3-tag {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center
+}
+
+.w3-badge {
+    border-radius: 50%
+}
+
+.w3-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.w3-ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd
+}
+
+.w3-ul li:last-child {
+    border-bottom: none
+}
+
+.w3-input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    color: #dde0d3; /* Original input text color */
+}
+
+.w3-select {
+    padding: 9px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: #dde0d3; /* Original select text color */
+}
+
+.w3-sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #010d14; /* Original sidebar background color */
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto
+}
+
+.w3-bar {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1976d2; /* Original navbar background color */
+    color: white;
+    padding: 15px 20px;
+}
+
+.w3-bar .w3-bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+}
+
+.w3-top, .w3-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #333; /* Original footer background color */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px; /* Rounded footer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.w3-top {
+    top: 0
+}
+
+.w3-bottom {
+    bottom: 0;
+    margin-top: 20px; /* Add spacing from content */
+}
+
+.w3-round {
+    border-radius: 4px;
+}
+
+.w3-container, .w3-panel {
+    padding: 0.01em 16px
+}
+
+.w3-card, .w3-card-2 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+.w3-card-4, .w3-hover-shadow:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.w3-opacity, .w3-hover-opacity:hover {
+    opacity: 0.60
+}
+
+.w3-opacity-off, .w3-hover-opacity-off:hover {
+    opacity: 1
+}
+
+/* Color modifications to use the original color scheme */
+.w3-blue, .w3-hover-blue:hover {
+    color: #fff !important;
+    background-color: #1976d2 !important; /* Original navbar background color */
+}
+
+.w3-dark-grey, .w3-hover-dark-grey:hover {
+    color: #fff !important;
+    background-color: #333 !important; /* Original footer background color */
+}
+
+.w3-teal, .w3-hover-teal:hover {
+    color: #fff !important;
+    background-color: #055a72 !important; /* Original body background color */
+}
+
+.w3-yellow, .w3-hover-yellow:hover {
+    color: #000 !important;
+    background-color: #fde047 !important; /* Original link color */
 }

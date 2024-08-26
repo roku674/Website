@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import '../index.css'; // Import the CSS file
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
