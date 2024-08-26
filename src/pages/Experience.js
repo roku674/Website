@@ -12,11 +12,17 @@ const Experience = () => {
         </Box>
 
         {/* Professional Experience Header */}
-        <Typography variant="h4" gutterBottom>Professional Experience</Typography>
-
+        <Typography variant="h4" align="center" gutterBottom>Professional Experience</Typography>
+        
+        {/* Job Timeline Graph */}
+        <Box mb={4} className="bubble">
+          <Typography variant="h4" align="center" gutterBottom>Job Timeline</Typography>
+          <img src="/pictures/experience.png" alt="Job Timeline Graph" style={{ width: '100%', maxWidth: '600px', borderRadius: '16px' }} />
+        </Box>
+        
         {/* Experience at Optimized Payments */}
         <Box className="bubble">
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" align="center" gutterBottom>
             Software Engineer | <a href="https://optimizedpayments.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Optimized Payments</a>
           </Typography>
           <Typography variant="body1" paragraph>
@@ -46,7 +52,7 @@ const Experience = () => {
 
         {/* Experience at MagMutual */}
         <Box className="bubble">
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" align="center" gutterBottom>
             Software Engineer | <a href="https://magmutual.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>MagMutual</a>
           </Typography>
           <Typography variant="body1" paragraph>
@@ -76,7 +82,7 @@ const Experience = () => {
 
         {/* Graduation Project at Georgia Southern University */}
         <Box className="bubble">
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" align="center" gutterBottom>
             Graduation Project | <a href="https://www.georgiasouthern.edu/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Georgia Southern University</a>
           </Typography>
           <Typography variant="body1" paragraph>
@@ -97,7 +103,7 @@ const Experience = () => {
 
         {/* Personal Project at Perilous Games */}
         <Box className="bubble">
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" align="center" gutterBottom>
             <a href="https://perilousgames.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Perilous Games</a> | Personal Project
           </Typography>
           <List>
@@ -118,7 +124,7 @@ const Experience = () => {
 
         {/* Internship Experience at Arcadis U.S. */}
         <Box className="bubble">
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" align="center" gutterBottom>
             Intern | <a href="https://www.arcadis.com/en-us" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Arcadis U.S., Smyrna, GA</a>
           </Typography>
           <Typography variant="body1" paragraph>
@@ -136,7 +142,7 @@ const Experience = () => {
 
         {/* Internship Experience at A&R Engineering */}
         <Box className="bubble">
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" align="center" gutterBottom>
             Intern | <a href="https://areng.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>A&R Engineering</a>
           </Typography>
           <Typography variant="body1" paragraph>
@@ -151,8 +157,8 @@ const Experience = () => {
 
         {/* Education Section */}
         <Box className="bubble">
-          <Typography variant="h4" gutterBottom>Education</Typography>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h4" align="center" gutterBottom>Education</Typography>
+          <Typography variant="h5" align="center" gutterBottom>
             B.S. Computer Science | <a href="https://www.georgiasouthern.edu/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>Georgia Southern University</a>
           </Typography>
           <Typography variant="body1" paragraph>
@@ -162,17 +168,11 @@ const Experience = () => {
 
         {/* Technical Skills Section */}
         <Box className="bubble">
-          <Typography variant="h4" gutterBottom>Technical Skills</Typography>
+          <Typography variant="h4" align="center" gutterBottom>Technical Skills</Typography>
           <Typography variant="body1" paragraph>
             <a href="https://drive.google.com/drive/folders/1bhHUa6VtaJY_iB_qCT3QM8G_A9AxCDWt?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>All Certifications</a><br />
             Scrum Master Certified, C# / VB / ASP.NET, .Net Core, React / Node.js, Python, SQL, Oracle SQL Developer, Java, C++, HTML, CSS, JavaScript, Unity, GitHub, Jira, Azure, AWS, Jenkins, Spinnaker, and more.
           </Typography>
-        </Box>
-
-        {/* Job Timeline Graph */}
-        <Box mb={4} className="bubble">
-          <Typography variant="h4" gutterBottom>Job Timeline</Typography>
-          <img src="/pictures/experience.png" alt="Job Timeline Graph" style={{ width: '100%', maxWidth: '600px', borderRadius: '16px' }} />
         </Box>
       </Box>
     </Container>
