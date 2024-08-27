@@ -1,0 +1,26 @@
+/* src/JsonVisualizer.css */
+.json-viewer {
+    font-family: monospace;
+    white-space: pre;
+  }
+  
+  .json-key {
+    color: darkblue;
+  }
+  
+  .json-value-string {
+    color: green;
+  }
+  
+  .json-value-number {
+    color: darkorange;
+  }
+  
+  .json-value-boolean {
+    color: red;
+  }
+  
+  .json-value-null {
+    color: gray;
+  }
+  

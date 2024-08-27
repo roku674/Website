@@ -4,17 +4,23 @@ FROM node:18-alpine AS build
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json
-COPY package.json ./
+# Copy package.json and package-lock.json to install dependencies
+COPY frontend/package*.json ./frontend/
+COPY backend/package*.json ./backend/
+COPY proxy/package*.json ./proxy/
 
-# Install dependencies
-RUN npm install
+# Install dependencies for all services
+RUN cd frontend && npm install && cd ..
+RUN cd backend && npm install && cd ..
+RUN cd proxy && npm install && cd ..
 
-# Copy the rest of the application to the container
-COPY . .
+# Copy all the files for each service
+COPY frontend ./frontend
+COPY backend ./backend
+COPY proxy ./proxy
 
-# Build the React application for production
-RUN npm run build
+# Build the frontend React application for production
+RUN cd frontend && npm run build && cd ..
 
 # Use a lightweight Node server to serve the React application
 FROM node:18-alpine
@@ -22,14 +28,18 @@ FROM node:18-alpine
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the built files from the previous stage
-COPY --from=build /app/build .
+# Copy the backend and proxy files
+COPY --from=build /app/backend ./backend
+COPY --from=build /app/proxy ./proxy
+
+# Copy the built frontend files to serve
+COPY --from=build /app/frontend/build ./frontend/build
 
 # Install a lightweight HTTP server for serving static content
 RUN npm install -g serve
 
-# Expose port 3000 to the Railway infrastructure
+# Expose necessary ports
 EXPOSE 3000
 
-# Start the application on port specified by the $PORT environment variable
-CMD ["serve", "-s", ".", "-l", "3000"]
+# Start all services
+CMD ["sh", "-c", "serve -s ./frontend/build -l 3000 & node backend/server.js & node proxy/proxy.js"]
