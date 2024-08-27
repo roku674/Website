@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography, Box, Link } from '@mui/material';
-import '../index.css'; // Import your CSS file
+import '../index.css'; // Ensure your CSS file is correctly imported
 
 const Home = () => {
   return (
@@ -47,7 +47,7 @@ const Home = () => {
             <img src="/pictures/vibe.png" alt="Vibraphone" className="vibe-image" />
           </Box>
           <Typography variant="body1" className="text-light-blue">
-            My computer is doo doo even though I'm a developer lol. I'm on an Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz, 3401 Mhz, 4 Core(s), 8 Logical Processor(s), NVIDIA GeForce GTX 960 for my GPU. I'm currently saving up for an all-new machine, but it's over 2k and will be water-cooled :D. Check out the build I want to make <Link href="https://www.microcenter.com/site/content/custom-pc-builder.aspx?load=67c25be5-4a3a-40c1-bcde-083be28d9fd0" target="_blank" rel="noopener noreferrer" className="link">
+            My computer is doo doo even though I'm a developer lol. I'm on an Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz, 3401 Mhz, 4 Core(s), 8 Logical Processor(s), NVIDIA GeForce GTX 960 for my GPU. I'm currently saving up for an all-new machine, but it's over 2k and will be water-cooled :D. Check out the build I want to make <Link href="https://www.microcenter.com/site/content/custom-pc-builder.aspx?load=67c25be5-4a3a-40c1-bcde-083be28d9fd0" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>
               here
             </Link>.
           </Typography>

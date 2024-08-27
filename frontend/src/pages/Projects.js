@@ -1,11 +1,12 @@
-// src/pages/Projects.js
 import React from 'react';
 import { Container, Typography, Box, List, ListItem, ListItemText } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Projects = () => {
   return (
     <Container>
-      <Box mt={4} className="bubble"> {/* Apply the bubble class here */}
+      <Box mt={4} className="bubble">
+        {/* Apply the bubble class here */}
         <Typography variant="h4" gutterBottom>Projects</Typography>
         <List>
           {/* Kingdom Of God Project */}
@@ -34,7 +35,14 @@ const Projects = () => {
                   Ad Astra Imperium - Video Game currently in progress.{' '}
                   <a href="https://www.perilousgames.com/dashboard/games" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>
                     Download Ad Astra
-                  </a>
+                  </a>{' '}
+                  |{' '}
+                  <RouterLink
+                    to={`/video/ad-astra-video.mp4/Ad%20Astra%20Imperium%20Video`}
+                    style={{ color: '#fde047' }}
+                  >
+                    Watch Ad Astra Imperium Video
+                  </RouterLink>
                 </>
               }
             />
