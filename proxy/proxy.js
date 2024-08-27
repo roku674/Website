@@ -13,7 +13,7 @@ app.get('/api/proxy', async (req, res) => {
   try {
     const response = await axios.get(`https://${Domain}/api/logs`, {
       headers: {
-      [API_KEY]: `${API_KEY}`  // Attach your API key here
+      [API_KEY_NAME]: `${API_KEY}` 
       }
     });
 
