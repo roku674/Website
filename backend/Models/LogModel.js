@@ -18,6 +18,6 @@ const TradingLogSchema = new mongoose.Schema({
 });
 
 // Create a model based on the schema
-const TradingLog = mongoose.model('aplaca_trading_logs', TradingLogSchema);
+const TradingLog = mongoose.model(process.env.ALPACA_TRADING_LOGS, TradingLogSchema);
 
 module.exports = TradingLog;
