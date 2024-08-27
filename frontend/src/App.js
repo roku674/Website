@@ -8,6 +8,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Bots from './pages/Bots';
+import TradingBot from './pages/Bots/Trading';
 import Tools from './pages/Tools';
 import VideoPage from './pages/VideoPage'; 
 import JsonVisualizer from './pages/Json/JsonVisualizer';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/bots" element={<Bots />} />
+        <Route path="/bots/trading" element={<TradingBot />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/tools/visualizer" element={<JsonVisualizer />} />
         <Route path="/tools/transformer" element={<CodeTransformer />} />

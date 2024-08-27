@@ -26,7 +26,7 @@ const botsData = [
         </Link>
       </>
     ),
-    link: "/bots/trader",
+    link: "/bots/trading",
   },
   {
     id: 2,
