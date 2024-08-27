@@ -38,7 +38,7 @@ const Projects = () => {
                   </a>{' '}
                   |{' '}
                   <RouterLink
-                    to={`/video/ad-astra-video.mp4/Ad%20Astra%20Imperium%20Video`}
+                    to={`/videos/ad-astra-video.mp4`}
                     style={{ color: '#fde047' }}
                   >
                     Watch Ad Astra Imperium Video
