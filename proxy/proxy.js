@@ -35,9 +35,6 @@ app.get('/api/proxy/logs', async (req, res) => {
   }
 });
 
-// Serve static frontend files for all other requests
-app.use(express.static('frontend/build')); // Adjust this path to where your frontend build files are
-
 // Start the HTTP server
 app.listen(PORT, () => {
   console.log(`Proxy is running on http://localhost:${PORT}`);
