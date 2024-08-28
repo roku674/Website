@@ -22,7 +22,7 @@ COPY backend ./backend
 COPY proxy ./proxy
 
 # Build-time arguments for environment variables
-ARG REACT_APP_DOMAIN
+ARG REACT_APP_PROXY_DOMAIN
 ARG REACT_APP_PROXY_PORT
 ARG API_KEY
 ARG API_KEY_NAME
@@ -35,7 +35,7 @@ ARG MONGODB_CLUSTER_LOGS
 ARG MONGODB_DATABASE_TRADER
 
 # Set environment variables
-ENV REACT_APP_DOMAIN=$REACT_APP_DOMAIN
+ENV REACT_APP_PROXY_DOMAIN=$REACT_APP_PROXY_DOMAIN
 ENV REACT_APP_PROXY_PORT=$REACT_APP_PROXY_PORT
 ENV API_KEY=$API_KEY
 ENV API_KEY_NAME=$API_KEY_NAME
@@ -66,7 +66,7 @@ COPY --from=build /app/frontend/build ./frontend/build
 RUN npm install -g serve
 
 # Expose necessary ports
-EXPOSE 3000 5000 7000
+EXPOSE 3000 7000
 
 # Start all services
 CMD ["sh", "-c", "serve -s ./frontend/build -l 3000 & node backend/server.js & node proxy/proxy.js"]

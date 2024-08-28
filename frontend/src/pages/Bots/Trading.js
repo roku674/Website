@@ -4,7 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import axios from "axios";
 
 // Use environment variables prefixed with REACT_APP_
-const baseUrl = `https://${process.env.REACT_APP_DOMAIN}`;
+const baseUrl = `https://${process.env.REACT_APP_PROXY_DOMAIN}`;
 
 const Trading = () => {
   const [logs, setLogs] = useState([]);
