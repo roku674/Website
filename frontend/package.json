@@ -5,7 +5,6 @@
   "author": "Alexander Fields <roku674@gmail.com>",
   "license": "Copyright Alexander Fields",
   "main": "src/index.js",
-  "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
