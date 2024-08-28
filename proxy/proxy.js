@@ -1,39 +1,48 @@
 require('dotenv').config();  // Load environment variables from .env file
 
 const express = require('express');
-const axios = require('axios');
+const fetch = require('node-fetch');  // Import node-fetch for HTTP requests
 const cors = require('cors');  // Import cors package
 
 const app = express();
-const PORT = process.env.PROXY_PORT || 7000;  // You can choose your desired port number
-const API_KEY = process.env.API_KEY;    // Replace with your actual API key
+const PORT = process.env.PROXY_PORT || 7000;  // Default port number for proxy server
+const API_KEY = process.env.API_KEY;    // Your actual API key
 const API_KEY_NAME = process.env.API_KEY_NAME;
-const baseUrl = `https://${process.env.DOMAIN}`;
+const backendUrl = `http://${process.env.BACKEND_DOMAIN}`; // Backend server URL using HTTP
+const frontendUrl = `https://${process.env.DOMAIN}`; // Frontend expects HTTPS
 
-// Allow any origin by setting 'origin' to true in CORS options
+// Allow requests from your specific frontend URL
 const corsOptions = {
-  origin: true,  // Allow all origins
-  optionsSuccessStatus: 200
+  origin: frontendUrl,  // Allow only your frontend origin
+  optionsSuccessStatus: 200,
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));  // Use CORS middleware with updated options
 app.use(express.json());
 
-// Proxy endpoint
+// Proxy endpoint to handle API requests
 app.get('/api/proxy/logs', async (req, res) => {
   try {
-    const response = await axios.get(`${baseUrl}/api/logs`, {
+    const response = await fetch(`${backendUrl}/api/logs`, {
+      method: 'GET',
       headers: {
-        [API_KEY_NAME]: `${API_KEY}` 
+        [API_KEY_NAME]: `${API_KEY}`
       }
     });
 
-    res.json(response.data);
+    if (!response.ok) {
+      throw new Error(`Error fetching data: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    res.json(data);
   } catch (error) {
+    console.error('Error fetching data from backend:', error.message);
     res.status(500).json({ error: 'An error occurred while fetching data.' });
   }
 });
 
+// Start the HTTP server
 app.listen(PORT, () => {
   console.log(`Proxy is running on http://localhost:${PORT}`);
 });
