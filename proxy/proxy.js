@@ -11,10 +11,10 @@ const API_KEY_NAME = process.env.API_KEY_NAME;
 const backendUrl = `http://${process.env.DOMAIN}:${process.env.BACKEND_PORT}`; // Backend server URL using HTTP
 const frontendUrl = `https://${process.env.DOMAIN}`; // Frontend expects HTTPS
 
-// Allow any origin by setting 'origin' to true in CORS options
+// Allow requests from your specific frontend URL
 const corsOptions = {
-  origin: frontendUrl,  // Allow all origins
-  optionsSuccessStatus: 200
+  origin: frontendUrl,  // Allow only your frontend origin
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));  // Use CORS middleware with updated options
@@ -31,6 +31,7 @@ app.get('/api/proxy/logs', async (req, res) => {
 
     res.json(response.data);
   } catch (error) {
+    console.error('Error fetching data from backend:', error.message);
     res.status(500).json({ error: 'An error occurred while fetching data.' });
   }
 });
