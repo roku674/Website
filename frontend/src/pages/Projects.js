@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Typography, Box, List, ListItem, ListItemText } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
 
 const Projects = () => {
   return (
@@ -37,12 +36,14 @@ const Projects = () => {
                     Download Ad Astra
                   </a>{' '}
                   |{' '}
-                  <RouterLink
-                    to={`/videos/ad-astra-video.mp4`}
+                  <a
+                    href="/videos/ad-astra-video.mp4"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{ color: '#fde047' }}
                   >
                     Watch Ad Astra Imperium Video
-                  </RouterLink>
+                  </a>
                 </>
               }
             />
