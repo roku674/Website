@@ -8,13 +8,13 @@ const app = express();
 const PORT = process.env.PROXY_PORT || 7000;  // Default port number for proxy server
 const API_KEY = process.env.API_KEY;    // Your actual API key
 const API_KEY_NAME = process.env.API_KEY_NAME;
-const backendUrl = `http://${process.env.DOMAIN}:${process.env.BACKEND_PORT}`; // Backend server URL using HTTP
-const frontendUrl = `https://${process.env.DOMAIN}`; // Frontend expects HTTPS
+const backendUrl = `https://${process.env.DOMAIN}`;
+const frontendUrl = `https://${process.env.REACT_APP_DOMAIN}`; // Frontend expects HTTPS
 
-// Allow requests from your specific frontend URL
+// Allow any origin by setting 'origin' to true in CORS options
 const corsOptions = {
-  origin: frontendUrl,  // Allow only your frontend origin
-  optionsSuccessStatus: 200,
+  origin: frontendUrl,  // Allow all origins
+  optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));  // Use CORS middleware with updated options
@@ -31,7 +31,6 @@ app.get('/api/proxy/logs', async (req, res) => {
 
     res.json(response.data);
   } catch (error) {
-    console.error('Error fetching data from backend:', error.message);
     res.status(500).json({ error: 'An error occurred while fetching data.' });
   }
 });
