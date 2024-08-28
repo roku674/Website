@@ -14,7 +14,6 @@ const Trading = () => {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        console.log(baseUrl);
         const response = await axios.get(`${baseUrl}/api/proxy/logs`);
 
         console.log("Fetched logs:", response.data); // Check data structure
