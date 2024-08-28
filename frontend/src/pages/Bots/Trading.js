@@ -7,11 +7,12 @@ const Trading = () => {
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const baseUrl = `http://${process.env.DOMAIN}:${process.env.PROXY_PORT}`;
 
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const response = await axios.get("/api/proxy/logs"); // Use the proxy endpoint
+        const response = await axios.get(`${baseUrl}/api/proxy/logs`);
 
         console.log("Fetched logs:", response.data); // Check data structure
 
