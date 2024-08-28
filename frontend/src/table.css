@@ -1,0 +1,50 @@
+/* General DataGrid styling */
+.data-grid-root {
+    background-color: #2a2a2a; /* Slightly lighter background */
+    color: #ffffff; /* Text color */
+    border-color: #444444; /* Border color */
+}
+
+/* Styling for the DataGrid cells */
+.data-grid-cell {
+    background-color: #2a2a2a; /* Background color for cells */
+    color: #ffffff; /* Text color for cells */
+}
+
+/* Styling for the DataGrid headers to be black */
+.MuiDataGrid-columnHeaders {
+    background-color: #000000 !important; /* Black background for headers */
+    color: #0c0000 !important; /* White text color for header text */
+    border-bottom: 1px solid #444444 !important; /* Border between header and body */
+}
+
+/* Hover effect for DataGrid rows */
+.data-grid-row:hover {
+    background-color: #3a3a3a; /* Highlight row on hover */
+}
+
+/* Styling for the pagination container */
+.MuiTablePagination-root {
+    background-color: #2a2a2a !important; /* Background color for pagination controls */
+    color: #ffffff !important; /* Text color for pagination controls */
+}
+
+/* Styling for pagination text and select */
+.MuiTablePagination-caption, 
+.MuiTablePagination-select,
+.MuiTablePagination-selectLabel,
+.MuiSelect-select,
+.MuiTablePagination-displayedRows {
+    color: #ffffff !important; /* Text color for pagination details and dropdown */
+}
+
+/* Styling for dropdown icon in pagination */
+.MuiSelect-icon {
+    color: #ffffff !important; /* Color of dropdown icon */
+}
+
+/* Styling for the dropdown menu in pagination */
+.MuiPaper-root {
+    background-color: #2a2a2a !important; /* Background color of dropdown menu */
+    color: #ffffff !important; /* Text color of dropdown menu */
+}

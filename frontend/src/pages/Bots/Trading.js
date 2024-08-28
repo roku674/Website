@@ -13,7 +13,7 @@ const Trading = () => {
 
   useEffect(() => {
     const fetchLogs = async () => {
-     try {
+      try {
         const response = await axios.get(`${baseUrl}/api/proxy/logs`);
 
         console.log("Fetched logs:", response.data); // Check data structure
@@ -38,7 +38,7 @@ const Trading = () => {
     };
 
     fetchLogs();
-  }, []); // Keep empty if only fetching on mount  
+  }, []); // Keep empty if only fetching on mount
 
   // Define columns for the data grid
   const columns = [
@@ -63,6 +63,11 @@ const Trading = () => {
         ) : (
           <Box style={{ height: 600, width: "100%" }}>
             <DataGrid
+              classes={{
+                root: "data-grid-root",
+                cell: "data-grid-cell",
+                columnHeaders: "data-grid-header",
+              }}
               rows={logs}
               columns={columns}
               pageSize={10}
