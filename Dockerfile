@@ -1,3 +1,5 @@
+# Dockerfile
+
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine AS build
 
@@ -20,6 +22,10 @@ COPY backend ./backend
 COPY proxy ./proxy
 
 # Build the frontend React application for production
+ARG REACT_APP_DOMAIN
+ARG REACT_APP_PROXY_PORT
+ENV REACT_APP_DOMAIN=$REACT_APP_DOMAIN
+ENV REACT_APP_PROXY_PORT=$REACT_APP_PROXY_PORT
 RUN cd frontend && npm run build && cd ..
 
 # Use a lightweight Node server to serve the React application
