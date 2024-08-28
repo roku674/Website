@@ -66,7 +66,7 @@ COPY --from=build /app/frontend/build ./frontend/build
 RUN npm install -g serve
 
 # Expose necessary ports
-EXPOSE 3000
+EXPOSE 3000 5000 7000
 
 # Start all services
 CMD ["sh", "-c", "serve -s ./frontend/build -l 3000 & node backend/server.js & node proxy/proxy.js"]
