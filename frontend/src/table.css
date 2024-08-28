@@ -1,0 +1,7 @@
+/* General DataGrid styling */
+.data-grid-root {
+    background-color: #d5d6c4; /* Slightly lighter background */
+    color: #ffffff; /* Text color */
+    border-color: #d5d6c4; /* Border color */
+}
+

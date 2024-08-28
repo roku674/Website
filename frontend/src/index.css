@@ -243,6 +243,15 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
     outline: 1px dotted ButtonText
 }
 
+/* Add rounded corners and shadow to cards */
+.rounded-card {
+    border-radius: 20px; /* Larger radius for more rounded corners */
+    overflow: hidden; /* Ensures child content respects the border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 10px; /* Add some margin around cards to create spacing */
+  }
+  
+
 fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
@@ -426,20 +435,32 @@ hr {
     outline: 0;
 }
 
-.w3-top, .w3-bottom {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    background-color: #333; /* Original footer background color */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px; /* Rounded footer */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/* Ensuring the top banner is blue */
+.w3-top {
+    background-color: #1976d2 !important; /* Blue color for the top banner */
+    color: #ffffff; /* White text color */
 }
 
-.w3-top {
-    top: 0
+/* General navbar styling */
+.w3-bar {
+    background-color: #1976d2 !important; /* Ensure navbar is blue */
+    color: white !important; /* Ensure text is white */
+    padding: 15px 20px;
+    overflow: hidden;
+}
+
+/* Force styles if needed */
+.w3-bar-item {
+    color: #ffffff !important; /* Force white text on navbar items */
+}
+
+.w3-top, .w3-bottom {
+    background-color: #1976d2 !important; /* Make sure both top and bottom are blue */
+    color: white !important;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .w3-bottom {

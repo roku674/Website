@@ -6,3 +6,6 @@ frontend/.env
 /proxy/node_modules
 /frontend/node_modules
 /.vs
+backend/package-lock.json
+proxy/package-lock.json
+package-lock.json

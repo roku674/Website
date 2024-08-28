@@ -3,11 +3,13 @@ import { Container, Typography, Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import axios from "axios";
 
+// Use environment variables prefixed with REACT_APP_
+const baseUrl = `https://${process.env.REACT_APP_DOMAIN}`;
+
 const Trading = () => {
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const baseUrl = `http://${process.env.DOMAIN}:${process.env.PROXY_PORT}`;
 
   useEffect(() => {
     const fetchLogs = async () => {
@@ -16,7 +18,6 @@ const Trading = () => {
 
         console.log("Fetched logs:", response.data); // Check data structure
 
-        // Format logs to ensure each row has a unique id for MUI DataGrid
         const formattedLogs = response.data.map((log) => ({
           id: log._id, // MUI DataGrid will use this `id`
           logId: log.LogMessage._id, // Include LogMessage._id if needed
@@ -29,6 +30,7 @@ const Trading = () => {
 
         setLogs(formattedLogs);
       } catch (err) {
+        console.error("Error fetching logs:", err); // Log error
         setError("An error occurred while fetching logs.");
       } finally {
         setLoading(false);
@@ -36,7 +38,7 @@ const Trading = () => {
     };
 
     fetchLogs();
-  }, []);
+  }, []); // Keep empty if only fetching on mount
 
   // Define columns for the data grid
   const columns = [
@@ -61,6 +63,11 @@ const Trading = () => {
         ) : (
           <Box style={{ height: 600, width: "100%" }}>
             <DataGrid
+              classes={{
+                root: "data-grid-root",
+                cell: "data-grid-cell",
+                columnHeaders: "data-grid-header",
+              }}
               rows={logs}
               columns={columns}
               pageSize={10}

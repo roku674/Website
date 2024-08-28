@@ -2,6 +2,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // Import global CSS (you can create this file to add global styles)
+import './table.css';
+
 import App from './App'; // Import the main App component
 
 // Get the root element from the HTML document

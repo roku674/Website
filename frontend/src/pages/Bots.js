@@ -32,10 +32,10 @@ const botsData = [
     id: 2,
     name: "Discord Bot",
     description: (
-        <>
-            Bot that helps my guild manage planets, be alerted to events, and more.
-        </>
-        ),
+      <>
+        Bot that helps my guild manage planets, be alerted to events, and more.
+      </>
+    ),
     link: "https://github.com/roku674/DiscordBotUpdates",
   },
   {
@@ -56,9 +56,14 @@ const BotsPage = () => {
       <Grid container spacing={4}>
         {botsData.map((bot) => (
           <Grid item xs={12} sm={6} md={4} key={bot.id}>
-            <Card className="bubble">
-              {" "}
-              {/* Apply any custom CSS class if needed */}
+            <Card
+              className="rounded-card" // Use CSS class for rounded styling
+              sx={{
+                borderRadius: "20px", // Increase the border-radius for more rounded corners
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Add a subtle shadow for depth
+                overflow: "hidden", // Prevent child overflow from affecting rounded corners
+              }}
+            >
               <CardContent>
                 <Typography variant="h5" component="div">
                   {bot.name}
