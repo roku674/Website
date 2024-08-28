@@ -10,8 +10,9 @@ const API_KEY = process.env.API_KEY;    // Replace with your actual API key
 const API_KEY_NAME = process.env.API_KEY_NAME;
 const baseUrl = `https://${process.env.DOMAIN}`;
 
+// Allow any origin by setting 'origin' to true in CORS options
 const corsOptions = {
-  origin: baseUrl,  
+  origin: true,  // Allow all origins
   optionsSuccessStatus: 200
 };
 
