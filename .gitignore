@@ -1,3 +1,4 @@
 proxy/.env
 backend/.env
 .env
+/backend/node_modules
