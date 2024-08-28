@@ -9,11 +9,23 @@ const Trading = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Function to fetch logs from the proxy server
     const fetchLogs = async () => {
       try {
         const response = await axios.get('/api/proxy');  // Use the proxy endpoint
-        setLogs(response.data);
+        console.log('Fetched logs:', response.data);  // Check data structure
+
+        // Format logs to ensure each row has a unique id
+        const formattedLogs = response.data.map(log => ({
+          id: log._id,  // MUI DataGrid will use this `id`
+          timeStamp: log.LogMessage.timeStamp,  // Adjust as needed
+          messageSource: log.LogMessage.messageSource,
+          localOperationName: log.LogMessage.localOperationName,
+          messageType: log.LogMessage.messageType,
+          message: log.LogMessage.message,
+          _id: log._id // Keep this if needed for other operations
+        }));
+
+        setLogs(formattedLogs);
       } catch (err) {
         setError('An error occurred while fetching logs.');
       } finally {
@@ -26,7 +38,7 @@ const Trading = () => {
 
   // Define columns for the data grid
   const columns = [
-    { field: '_id', headerName: 'ID', width: 200 },
+    { field: 'id', headerName: 'ID', width: 200 },
     { field: 'timeStamp', headerName: 'Timestamp', width: 200 },
     { field: 'messageSource', headerName: 'Message Source', width: 150 },
     { field: 'localOperationName', headerName: 'Operation Name', width: 200 },
@@ -53,7 +65,7 @@ const Trading = () => {
               rowsPerPageOptions={[10, 20, 50]}
               checkboxSelection
               disableSelectionOnClick
-              getRowId={(row) => row._id}  // Ensure each row has a unique identifier
+              getRowId={(row) => row.id}  // Use the formatted `id`
             />
           </Box>
         )}
