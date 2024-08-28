@@ -13,8 +13,8 @@ const Tools = () => {
       <List className="w3-ul">
         {/* Tools listed in alphabetical order */}
         <ListItem className="w3-ul li">
-          <Link href="/tools/separator" className="text-light-blue" underline="hover">
-            Comma Separator Tool
+          <Link href="/tools/separater" className="text-light-blue" underline="hover">
+            Comma Separater Tool
           </Link>
         </ListItem>
         <ListItem className="w3-ul li">
