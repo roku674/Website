@@ -243,6 +243,15 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
     outline: 1px dotted ButtonText
 }
 
+/* Add rounded corners and shadow to cards */
+.rounded-card {
+    border-radius: 20px; /* Larger radius for more rounded corners */
+    overflow: hidden; /* Ensures child content respects the border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 10px; /* Add some margin around cards to create spacing */
+  }
+  
+
 fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
