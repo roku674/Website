@@ -8,11 +8,10 @@ const app = express();
 const PORT = process.env.PROXY_PORT || 7000;  // You can choose your desired port number
 const API_KEY = process.env.API_KEY;    // Replace with your actual API key
 const API_KEY_NAME = process.env.API_KEY_NAME;
-const baseUrl = `http://${process.env.DOMAIN}:${process.env.BACKEND_PORT}`;
-const frontendUrl = `https://${process.env.DOMAIN}:${process.env.PORT}`;
+const baseUrl = `https://${process.env.DOMAIN}`;
 
 const corsOptions = {
-  origin: frontendUrl,  
+  origin: baseUrl,  
   optionsSuccessStatus: 200
 };
 
