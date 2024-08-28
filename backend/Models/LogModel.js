@@ -16,37 +16,19 @@ function getTradingLogModel(dbName) {
     message: { type: String, required: true },
   });
 
-  // Define the schema for the main TradingLog document
-  const TradingLogSchema = new mongoose.Schema({
-    _id: { type: mongoose.Schema.Types.ObjectId, required: true }, // The root document's _id
-    LogMessage: { type: LogMessageSchema, required: true }, // Embed LogMessage as a subdocument
-  });
+  // Define the schema for the main TradingLog document and specify the collection name
+  const TradingLogSchema = new mongoose.Schema(
+    {
+      _id: { type: mongoose.Schema.Types.ObjectId, required: true }, // The root document's _id
+      LogMessage: { type: LogMessageSchema, required: true }, // Embed LogMessage as a subdocument
+    },
+    {
+      collection: process.env.MONGODB_CLUSTER_LOGS || 'Poison', // Explicitly set the collection name
+    }
+  );
 
-  // Check if model already exists to avoid "OverwriteModelError"
-  const modelName = process.env.MONGODB_CLUSTER_LOGS || 'TradingLog'; // Use default if env variable not set
-
-  if (db.models[modelName]) {
-    return db.model(modelName);
-  }
-
-  // Create a model based on the schema and the current database
-  return db.model(modelName, TradingLogSchema);
+  // Create and return the model based on the schema and the current database
+  return db.model('TradingLog', TradingLogSchema); // Use 'TradingLog' or any singular name you prefer
 }
 
-// Example usage: Access logs from the "automated_trader" database
-const TradingLog = getTradingLogModel(process.env.MONGODB_DATABASE_TRADER);
-
-// Use async/await to fetch logs
-async function fetchLogs() {
-  try {
-    const logs = await TradingLog.find({});
-    console.log("Fetched logs:", logs);
-  } catch (err) {
-    console.error("Error fetching logs:", err);
-  }
-}
-
-// Call the function to fetch logs
-fetchLogs();
-
-module.exports = TradingLog;
+module.exports = getTradingLogModel;  // Export the function to get the model
