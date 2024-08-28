@@ -13,6 +13,8 @@ import Tools from './pages/Tools';
 import VideoPage from './pages/VideoPage'; 
 import JsonVisualizer from './pages/Json/JsonVisualizer';
 import CodeTransformer from './pages/Transformer/CodeTransformer';
+import CommaSeparater from './pages/Transformer/CommaSeparater';
+import RNGsus from './pages/RNG/RNGsus';
 
 function App() {
   return (
@@ -25,9 +27,11 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/bots" element={<Bots />} />
         <Route path="/bots/trading" element={<TradingBot />} />
+        <Route path="/rng/generatestring" element={<RNGsus />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/tools/visualizer" element={<JsonVisualizer />} />
         <Route path="/tools/transformer" element={<CodeTransformer />} />
+        <Route path="/tools/separater" element={<CommaSeparater />} />
         <Route path="/video/:videoSrc/:title" element={<VideoPage />} /> {/* Generic video page route */}
       </Routes>
       <Footer /> {}
