@@ -1,3 +1,5 @@
+require('dotenv').config();  // Load environment variables from .env file
+
 const express = require('express');
 const axios = require('axios');
 
@@ -5,15 +7,16 @@ const app = express();
 const PORT = process.env.PROXY_PORT || 7000;  // You can choose your desired port number
 const API_KEY = process.env.API_KEY;    // Replace with your actual API key
 const API_KEY_NAME = process.env.API_KEY_NAME;
-const Domain = process.env.DOMAIN;
+const baseUrl = `http://${process.env.DOMAIN}:${process.env.BACKEND_PORT}`;
+
 app.use(express.json());
 
 // Proxy endpoint
-app.get('/api/proxy', async (req, res) => {
+app.get('/api/proxy/logs', async (req, res) => {
   try {
-    const response = await axios.get(`https://${Domain}/api/logs`, {
+    const response = await axios.get(`${baseUrl}/api/logs`, {
       headers: {
-      [API_KEY_NAME]: `${API_KEY}` 
+        [API_KEY_NAME]: `${API_KEY}` 
       }
     });
 

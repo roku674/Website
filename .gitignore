@@ -5,3 +5,4 @@ frontend/.env
 /backend/node_modules
 /proxy/node_modules
 /frontend/node_modules
+/.vs
