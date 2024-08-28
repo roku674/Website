@@ -9,7 +9,7 @@ const Domain = process.env.DOMAIN;
 app.use(express.json());
 
 // Proxy endpoint
-app.get('/api/proxy', async (req, res) => {
+app.get('/api/proxy/logs', async (req, res) => {
   try {
     const response = await axios.get(`https://${Domain}/api/logs`, {
       headers: {
