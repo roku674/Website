@@ -5,26 +5,27 @@ const axios = require('axios');
 const cors = require('cors');  // Import cors package
 
 const app = express();
-const PORT = process.env.PROXY_PORT || 7000;  // You can choose your desired port number
-const API_KEY = process.env.API_KEY;    // Replace with your actual API key
+const PORT = process.env.PROXY_PORT || 7000;  // Default port number for proxy server
+const API_KEY = process.env.API_KEY;    // Your actual API key
 const API_KEY_NAME = process.env.API_KEY_NAME;
-const baseUrl = `https://${process.env.DOMAIN}`;
+const backendUrl = `http://${process.env.DOMAIN}:${process.env.BACKEND_PORT}`; // Backend server URL using HTTP
+const frontendUrl = `https://${process.env.DOMAIN}`; // Frontend expects HTTPS
 
 // Allow any origin by setting 'origin' to true in CORS options
 const corsOptions = {
-  origin: true,  // Allow all origins
+  origin: frontendUrl,  // Allow all origins
   optionsSuccessStatus: 200
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));  // Use CORS middleware with updated options
 app.use(express.json());
 
-// Proxy endpoint
+// Proxy endpoint to handle API requests
 app.get('/api/proxy/logs', async (req, res) => {
   try {
-    const response = await axios.get(`${baseUrl}/api/logs`, {
+    const response = await axios.get(`${backendUrl}/api/logs`, {
       headers: {
-        [API_KEY_NAME]: `${API_KEY}` 
+        [API_KEY_NAME]: `${API_KEY}`
       }
     });
 
@@ -34,6 +35,10 @@ app.get('/api/proxy/logs', async (req, res) => {
   }
 });
 
+// Serve static frontend files for all other requests
+app.use(express.static('frontend/build')); // Adjust this path to where your frontend build files are
+
+// Start the HTTP server
 app.listen(PORT, () => {
   console.log(`Proxy is running on http://localhost:${PORT}`);
 });
