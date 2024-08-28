@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Typography, Box } from '@mui/material';
-import { DataGrid } from '@mui/x-data-grid';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { Container, Typography, Box } from "@mui/material";
+import { DataGrid } from "@mui/x-data-grid";
+import axios from "axios";
 
 const Trading = () => {
   const [logs, setLogs] = useState([]);
@@ -11,23 +11,24 @@ const Trading = () => {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const response = await axios.get('/api/proxy');  // Use the proxy endpoint
-        console.log('Fetched logs:', response.data);  // Check data structure
+        const response = await axios.get("/api/proxy"); // Use the proxy endpoint
 
-        // Format logs to ensure each row has a unique id
-        const formattedLogs = response.data.map(log => ({
-          id: log._id,  // MUI DataGrid will use this `id`
-          timeStamp: log.LogMessage.timeStamp,  // Adjust as needed
+        console.log("Fetched logs:", response.data); // Check data structure
+
+        // Format logs to ensure each row has a unique id for MUI DataGrid
+        const formattedLogs = response.data.map((log) => ({
+          id: log._id, // MUI DataGrid will use this `id`
+          logId: log.LogMessage._id, // Include LogMessage._id if needed
+          timeStamp: log.LogMessage.timeStamp, // Adjust as needed
           messageSource: log.LogMessage.messageSource,
           localOperationName: log.LogMessage.localOperationName,
           messageType: log.LogMessage.messageType,
           message: log.LogMessage.message,
-          _id: log._id // Keep this if needed for other operations
         }));
 
         setLogs(formattedLogs);
       } catch (err) {
-        setError('An error occurred while fetching logs.');
+        setError("An error occurred while fetching logs.");
       } finally {
         setLoading(false);
       }
@@ -38,12 +39,12 @@ const Trading = () => {
 
   // Define columns for the data grid
   const columns = [
-    { field: 'id', headerName: 'ID', width: 200 },
-    { field: 'timeStamp', headerName: 'Timestamp', width: 200 },
-    { field: 'messageSource', headerName: 'Message Source', width: 150 },
-    { field: 'localOperationName', headerName: 'Operation Name', width: 200 },
-    { field: 'messageType', headerName: 'Message Type', width: 150 },
-    { field: 'message', headerName: 'Message', width: 300 },
+    { field: "id", headerName: "ID", width: 200 },
+    { field: "timeStamp", headerName: "Timestamp", width: 200 },
+    { field: "messageSource", headerName: "Message Source", width: 150 },
+    { field: "localOperationName", headerName: "Operation Name", width: 200 },
+    { field: "messageType", headerName: "Message Type", width: 150 },
+    { field: "message", headerName: "Message", width: 300 },
   ];
 
   return (
@@ -57,7 +58,7 @@ const Trading = () => {
         ) : error ? (
           <Typography color="error">{error}</Typography>
         ) : (
-          <Box style={{ height: 600, width: '100%' }}>
+          <Box style={{ height: 600, width: "100%" }}>
             <DataGrid
               rows={logs}
               columns={columns}
@@ -65,7 +66,7 @@ const Trading = () => {
               rowsPerPageOptions={[10, 20, 50]}
               checkboxSelection
               disableSelectionOnClick
-              getRowId={(row) => row.id}  // Use the formatted `id`
+              getRowId={(row) => row.id} // Use the formatted `id`
             />
           </Box>
         )}
