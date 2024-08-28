@@ -1,1 +1,0 @@
-//Going to be a page that shows my stock picks and what my AI is buying/selling

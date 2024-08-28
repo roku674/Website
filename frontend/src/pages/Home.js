@@ -26,7 +26,7 @@ const Home = () => {
               <img src="/pictures/gsu.png" alt="Georgia Southern University" className="image-box" />
             </Box>
             <Typography variant="body1" className="text-light-blue">
-              Hi, I'm Alexander Fields, a software engineer with a passion for backend development but also skilled in full-stack engineering. I graduated from Georgia Southern University. I'm always looking for side projects to work on outside of my main role.
+              Hi, I'm Alexander Fields, a software engineer with a passion for backend development but also skilled in full-stack engineering. I graduated from Georgia Southern University. I'm always looking for side <a href='/projects'> projects </a> to work on outside of my main role.
             </Typography>
           </Box>
         </Box>
