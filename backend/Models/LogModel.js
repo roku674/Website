@@ -23,7 +23,7 @@ function getTradingLogModel(dbName) {
   });
 
   // Check if model already exists to avoid "OverwriteModelError"
-  const modelName = process.env.MONGODB_CLUSTER_LOGS || 'Poison'; // Use default if env variable not set
+  const modelName = process.env.MONGODB_CLUSTER_LOGS || 'TradingLog'; // Use default if env variable not set
 
   if (db.models[modelName]) {
     return db.model(modelName);
@@ -36,12 +36,17 @@ function getTradingLogModel(dbName) {
 // Example usage: Access logs from the "automated_trader" database
 const TradingLog = getTradingLogModel(process.env.MONGODB_DATABASE_TRADER);
 
-TradingLog.find({}, (err, logs) => {
-  if (err) {
-    console.error("Error fetching logs:", err);
-  } else {
+// Use async/await to fetch logs
+async function fetchLogs() {
+  try {
+    const logs = await TradingLog.find({});
     console.log("Fetched logs:", logs);
+  } catch (err) {
+    console.error("Error fetching logs:", err);
   }
-});
+}
+
+// Call the function to fetch logs
+fetchLogs();
 
 module.exports = TradingLog;
