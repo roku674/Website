@@ -1,4 +1,4 @@
 # personal-website
- My personal website at https://www.dev.alexanderfields.me
+ My personal website at https://www.alexanderfields.me
 
  normally i write backends in C# .Net but wanted to practice a node one so i'll use it for my personal site.
