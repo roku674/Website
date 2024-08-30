@@ -1,514 +1,536 @@
-/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+/* Base styles */
 html {
-    box-sizing: border-box
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
-    box-sizing: inherit
-}
-
-/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
-html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
-    background-color: #1a1a1a; /* Original body background color */
-    color: #ffffff; /* Original text color */
+  margin: 0;
+  background-color: #1a1a1a; /* Original body background color */
+  color: #ffffff; /* Original text color */
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* Updated center-text class to include color */
-.center-text {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #f3efb9; /* Set the desired text color here */
-  }  
-
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
-    display: block
-}
-
-summary {
-    display: list-item
-}
-
-audio, canvas, progress, video {
-    display: inline-block
-}
-
-progress {
-    vertical-align: baseline
-}
-
-audio:not([controls]) {
-    display: none;
-    height: 0
-}
-
-[hidden], template {
-    display: none
-}
-
-a {
-    background-color: transparent;
-    color: #fde047; /* Original link color */
-    text-decoration: none;
-}
-
-a:active, a:hover {
-    outline-width: 0;
-    color: #18d4af; /* Original link hover color */
-}
-
-abbr[title] {
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration: underline dotted
-}
-
-b, strong {
-    font-weight: bolder
-}
-
-dfn {
-    font-style: italic
-}
-
-mark {
-    background: #ff0;
-    color: #000
-}
-
-small {
-    font-size: 80%
-}
-
-sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline
-}
-
-sub {
-    bottom: -0.25em
-}
-
-sup {
-    top: -0.5em
-}
-
-figure {
-    margin: 1em 40px
-}
-
-img {
-    border-style: none
-}
-
-code, kbd, pre, samp {
-    font-family: monospace, monospace;
-    font-size: 1em
-}
-
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible
-}
-
-/* CSS for the bubble */
-.bubble {
-    background-color: #0078D4; /* Your chosen bubble color */
-    border-radius: 16px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 24px; /* Padding inside the bubble */
-    margin-bottom: 20px; /* Space between bubbles */
-    color: #ffffff; /* Text color */
-  }
-  
-  /* Center and evenly space icons in support and contact sections */
-  .support-icons, .contact-icons {
-    display: flex;
-    justify-content: space-evenly; /* Evenly space icons */
-    align-items: center;
-    padding-top: 10px; /* Add padding to the top */
-  }
-  
-  .support-icons img, .contact-icons img {
-    width: 30px; /* Reduce icon size for uniform look */
-    margin: 0 10px; /* Equal margin on both sides for uniform spacing */
-  }
-  
-  /* Ensure typography is centered within the bubble */
-  .center-text {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #ffffff; /* Example color for center text */
-  }
-  
-  /* Adjusted styles for images to reduce size */
-  .profile-image {
-    width: 120px; /* Reduced size for profile image */
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .image-box {
-    width: 60px; /* Reduced size for smaller content images */
-    border-radius: 8px;
-  }
-  
-  .vibe-image {
-    width: 80px; /* Reduced size for larger content image */
-    border-radius: 8px;
-  }
-  
-  .text-light-blue {
-    color: #dde0d3;
-  }
-  
-  .donation-image {
-    width: 30px; /* Smaller size for donation images */
-    margin-right: 10px; /* Adjusted spacing for better alignment */
-  }
-  
-  /* General Flexbox alignment classes */
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .flex-start {
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .mt-4 {
-    margin-top: 16px;
-  }
-  
-  .mb-4 {
-    margin-bottom: 16px;
-  }
-  
-  .mb-2 {
-    margin-bottom: 8px;
-  }
-  
-  .mr-2 {
-    margin-right: 8px;
-  }
-  
-  .p-3 {
-    padding: 16px;
-  }  
-
-button, input, select, textarea, optgroup {
-    font: inherit;
-    margin: 0
-}
-
-optgroup {
-    font-weight: bold
-}
-
-button, input {
-    overflow: visible
-}
-
-button, select {
-    text-transform: none
-}
-
-button, [type=button], [type=reset], [type=submit] {
-    -webkit-appearance: button
-}
-
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
-    border-style: none;
-    padding: 0
-}
-
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
-    outline: 1px dotted ButtonText
-}
-
-/* Add rounded corners and shadow to cards */
-.rounded-card {
-    border-radius: 20px; /* Larger radius for more rounded corners */
-    overflow: hidden; /* Ensures child content respects the border radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 10px; /* Add some margin around cards to create spacing */
-  }
-  
-
-fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: .35em .625em .75em
-}
-
-legend {
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal
-}
-
-textarea {
-    overflow: auto
-}
-
-[type=checkbox], [type=radio] {
-    padding: 0
-}
-
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
-    height: auto
-}
-
-[type=search] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px
-}
-
-[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none
-}
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit
-}
-
-/* End extract */
-html, body {
-    font-family: Verdana, sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-html {
-    overflow-x: hidden;
-}
-
+/* Responsive Typography */
 h1 {
-    font-size: 36px
+  font-size: 2.25rem;
 }
 
 h2 {
-    font-size: 30px
+  font-size: 1.875rem;
 }
 
 h3 {
-    font-size: 24px
+  font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 20px
+  font-size: 1.25rem;
 }
 
 h5 {
-    font-size: 18px
+  font-size: 1.125rem;
 }
 
 h6 {
-    font-size: 16px
+  font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-weight: 400;
-    margin: 10px 0;
-    color: #ffffff; /* Original heading color */
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+  color: #ffffff; /* Original heading color */
 }
 
 hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
 }
 
+a {
+  background-color: transparent;
+  color: #fde047; /* Original link color */
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline-width: 0;
+  color: #18d4af; /* Original link hover color */
+}
+
+/* Classes for text and elements */
+.center-text {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #f3efb9; /* Updated text color */
+}
+
+.bubble {
+  background-color: #0078D4; /* Bubble color */
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.support-icons, .contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.support-icons img, .contact-icons img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.profile-image, .image-box, .vibe-image, .donation-image {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  width: 120px;
+}
+
+.image-box {
+  width: 60px;
+  border-radius: 8px;
+}
+
+.vibe-image {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.donation-image {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.text-light-blue {
+  color: #dde0d3;
+}
+
+/* Flexbox utilities */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.p-3 {
+  padding: 16px;
+}
+
+/* Buttons and form elements */
 .w3-btn, .w3-button {
-    border: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    color: #fff; /* Original button text color */
-    background-color: #010d14; /* Original button background color */
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  background-color: #010d14;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .w3-btn:hover, .w3-button:hover {
-    background-color: #1e947c; /* Original button hover background color */
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #1e947c;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.w3-disabled, .w3-btn:disabled, .w3-button:disabled {
-    cursor: not-allowed;
-    opacity: 0.3
-}
-
-.w3-badge, .w3-tag {
-    background-color: #000;
-    color: #fff;
-    display: inline-block;
-    padding-left: 8px;
-    padding-right: 8px;
-    text-align: center
-}
-
-.w3-badge {
-    border-radius: 50%
-}
-
-.w3-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0
-}
-
-.w3-ul li {
-    padding: 8px 16px;
-    border-bottom: 1px solid #ddd
-}
-
-.w3-ul li:last-child {
-    border-bottom: none
-}
-
-.w3-input {
-    padding: 8px;
-    display: block;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-    color: #dde0d3; /* Original input text color */
-}
-
-.w3-select {
-    padding: 9px 0;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    color: #dde0d3; /* Original select text color */
+.w3-input, .w3-select {
+  padding: 8px;
+  display: block;
+  width: 100%;
+  color: #dde0d3;
+  border: none;
+  border-bottom: 1px solid #ccc;
 }
 
 .w3-sidebar {
-    height: 100%;
-    width: 200px;
-    background-color: #010d14; /* Original sidebar background color */
-    position: fixed !important;
-    z-index: 1;
-    overflow: auto
+  height: 100%;
+  width: 200px;
+  background-color: #010d14;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
 }
 
-.w3-bar {
-    width: 100%;
-    overflow: hidden;
-    background-color: #1976d2; /* Original navbar background color */
-    color: white;
-    padding: 15px 20px;
+/* Navbar and top/bottom bar styling */
+.w3-bar, .w3-top, .w3-bottom {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1976d2;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.w3-bar .w3-bar-item {
-    padding: 8px 16px;
-    float: left;
-    width: auto;
-    border: none;
-    display: block;
-    outline: 0;
-}
-
-/* Ensuring the top banner is blue */
-.w3-top {
-    background-color: #1976d2 !important; /* Blue color for the top banner */
-    color: #ffffff; /* White text color */
-}
-
-/* General navbar styling */
-.w3-bar {
-    background-color: #1976d2 !important; /* Ensure navbar is blue */
-    color: white !important; /* Ensure text is white */
-    padding: 15px 20px;
-    overflow: hidden;
-}
-
-/* Force styles if needed */
 .w3-bar-item {
-    color: #ffffff !important; /* Force white text on navbar items */
-}
-
-.w3-top, .w3-bottom {
-    background-color: #1976d2 !important; /* Make sure both top and bottom are blue */
-    color: white !important;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
 }
 
 .w3-bottom {
-    bottom: 0;
-    margin-top: 20px; /* Add spacing from content */
+  position: fixed;
+  bottom: 0;
+  margin-top: 20px;
 }
 
-.w3-round {
-    border-radius: 4px;
+/* Cards and badges */
+.rounded-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
 
-.w3-container, .w3-panel {
-    padding: 0.01em 16px
+.w3-badge {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 50%;
 }
 
-.w3-card, .w3-card-2 {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+.w3-tag {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+}
+
+.w3-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.w3-ul li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.w3-ul li:last-child {
+  border-bottom: none;
+}
+
+/* Utility classes for cards and shadows */
+.w3-card, .w3-card-2, .w3-card-4, .w3-hover-shadow:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .w3-card-4, .w3-hover-shadow:hover {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .w3-opacity, .w3-hover-opacity:hover {
-    opacity: 0.60
+  opacity: 0.60;
 }
 
 .w3-opacity-off, .w3-hover-opacity-off:hover {
-    opacity: 1
+  opacity: 1;
 }
 
-/* Color modifications to use the original color scheme */
+.w3-round {
+  border-radius: 4px;
+}
+
+.w3-container, .w3-panel {
+  padding: 0.01em 16px;
+}
+
+/* Colors */
 .w3-blue, .w3-hover-blue:hover {
-    color: #fff !important;
-    background-color: #1976d2 !important; /* Original navbar background color */
+  color: #fff !important;
+  background-color: #1976d2 !important; /* Original navbar background color */
 }
 
 .w3-dark-grey, .w3-hover-dark-grey:hover {
-    color: #fff !important;
-    background-color: #333 !important; /* Original footer background color */
+  color: #fff !important;
+  background-color: #333 !important; /* Original footer background color */
 }
 
 .w3-teal, .w3-hover-teal:hover {
-    color: #fff !important;
-    background-color: #055a72 !important; /* Original body background color */
+  color: #fff !important;
+  background-color: #055a72 !important; /* Original body background color */
 }
 
 .w3-yellow, .w3-hover-yellow:hover {
-    color: #000 !important;
-    background-color: #fde047 !important; /* Original link color */
+  color: #000 !important;
+  background-color: #fde047 !important; /* Original link color */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  /* Adjust typography for smaller screens */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+  }
+
+  /* Stack navbar items vertically */
+  .w3-bar-item {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Make sidebar full width */
+  .w3-sidebar {
+    width: 100%;
+  }
+/* Adjust image sizes */
+  .profile-image {
+    width: 80px; /* Reduced size for smaller screens */
+  }
+
+  .image-box {
+    width: 50px; /* Smaller content images for smaller screens */
+  }
+
+  .vibe-image {
+    width: 60px; /* Adjusted size for smaller screens */
+  }
+
+  .donation-image {
+    width: 20px; /* Adjusted for smaller screens */
+    margin-right: 5px;
+  }
+
+  /* Adjust container padding for smaller screens */
+  .w3-container, .w3-panel {
+    padding: 0.01em 8px; /* Reduced padding */
+  }
+
+  /* Adjust flexbox layout for smaller screens */
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .support-icons, .contact-icons {
+    flex-direction: column; /* Stack icons vertically */
+    padding-top: 5px;
+  }
+
+  /* Adjust button and form input sizes */
+  .w3-btn, .w3-button {
+    padding: 6px 12px; /* Smaller padding for buttons */
+  }
+
+  .w3-input, .w3-select {
+    padding: 6px; /* Adjust input padding */
+  }
+
+  /* Adjust bubble padding and margins */
+  .bubble {
+    padding: 16px; /* Less padding for smaller screens */
+    margin-bottom: 10px; /* Reduced margin */
+  }
+
+  /* Full-width buttons on smaller screens */
+  .w3-btn, .w3-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Adjust card margins */
+  .rounded-card {
+    margin: 5px; /* Smaller margin for better fit on mobile */
+  }
+
+  /* Adjust top and bottom bars for smaller screens */
+  .w3-top, .w3-bottom {
+    padding: 10px; /* Reduced padding */
+    font-size: 0.875rem; /* Smaller font size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Additional adjustments for very small screens */
+
+  /* Further reduce font sizes */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5, h6 {
+    font-size: 0.875rem;
+  }
+
+  /* Reduce button text size */
+  .w3-btn, .w3-button {
+    font-size: 0.875rem;
+  }
+
+  /* Adjust flexbox icons */
+  .support-icons img, .contact-icons img {
+    width: 25px; /* Smaller icon size */
+  }
+
+  /* Adjust bubble styles */
+  .bubble {
+    padding: 12px; /* Even less padding */
+    margin-bottom: 8px; /* Tighter spacing */
+  }
+
+  /* Adjust sidebar */
+  .w3-sidebar {
+    padding-top: 10px; /* Added padding for aesthetics */
+  }
+}
+
+/* Accessibility and usability enhancements */
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* Ensure accessibility and spacing */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"], [type="radio"] {
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
 }
