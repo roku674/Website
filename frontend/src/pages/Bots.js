@@ -40,8 +40,8 @@ const botsData = [
   },
   {
     id: 3,
-    name: "Alexander",
-    description: "Me I'm actually an AI in disguise :D",
+    name: "Alexander 1",
+    description: "Me I'm actually an AI in disguise :D.",
     link: "/bots/alexander",
   },
   // Add more bots as needed
