@@ -14,6 +14,7 @@ import VideoPage from './pages/VideoPage';
 import JsonVisualizer from './pages/Json/JsonVisualizer';
 import CodeTransformer from './pages/Transformer/CodeTransformer';
 import CommaSeparater from './pages/Transformer/CommaSeparater';
+import URLEncoder from './pages/Transformer/URLEncoder';
 import RNGsus from './pages/RNG/RNGsus';
 
 function App() {
@@ -29,9 +30,10 @@ function App() {
         <Route path="/bots/trading" element={<TradingBot />} />
         <Route path="/rng/generatestring" element={<RNGsus />} />
         <Route path="/tools" element={<Tools />} />
-        <Route path="/tools/visualizer" element={<JsonVisualizer />} />
-        <Route path="/tools/transformer" element={<CodeTransformer />} />
         <Route path="/tools/separater" element={<CommaSeparater />} />
+        <Route path="/tools/transformer" element={<CodeTransformer />} />
+        <Route path="/tools/urlencoder" element={<URLEncoder />} />
+        <Route path="/tools/visualizer" element={<JsonVisualizer />} />
         <Route path="/video/:videoSrc/:title" element={<VideoPage />} /> {/* Generic video page route */}
       </Routes>
       <Footer /> {}
