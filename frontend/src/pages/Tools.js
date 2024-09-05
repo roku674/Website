@@ -13,6 +13,11 @@ const Tools = () => {
       <List className="w3-ul">
         {/* Tools listed in alphabetical order */}
         <ListItem className="w3-ul li">
+          <Link href="/rng/generatestring" className="text-light-blue" underline="hover">
+            64-bit String Generator
+          </Link>
+        </ListItem>
+        <ListItem className="w3-ul li">
           <Link href="/tools/separater" className="text-light-blue" underline="hover">
             Comma Separater Tool
           </Link>
@@ -29,8 +34,8 @@ const Tools = () => {
           </Link>
         </ListItem>
         <ListItem className="w3-ul li">
-          <Link href="/rng/generatestring" className="text-light-blue" underline="hover">
-            64-bit String Generator
+          <Link href="/tools/visualizer" className="text-light-blue" underline="hover">
+            JSON Visualizer (Under Construction)
           </Link>
         </ListItem>
         <ListItem className="w3-ul li">
@@ -39,8 +44,8 @@ const Tools = () => {
           </Link>
         </ListItem>
         <ListItem className="w3-ul li">
-          <Link href="/tools/visualizer" className="text-light-blue" underline="hover">
-            JSON Visualizer (Under Construction)
+          <Link href="/tools/urlencoder" className="text-light-blue" underline="hover">
+            URL String Encoder
           </Link>
         </ListItem>
         <ListItem>
