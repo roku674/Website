@@ -18,7 +18,6 @@ const Projects = () => {
           Projects
         </Typography>
         <List>
-          /*
           {/* Kingdom Of God Project 
           <ListItem>
             <ListItemText
