@@ -18,7 +18,8 @@ const Projects = () => {
           Projects
         </Typography>
         <List>
-          {/* Kingdom Of God Project */}
+          /*
+          {/* Kingdom Of God Project 
           <ListItem>
             <ListItemText
               primary={
@@ -47,7 +48,7 @@ const Projects = () => {
               }
             />
           </ListItem>
-
+          */}
           {/* Ad Astra Imperium Project */}
           <ListItem>
             <ListItemText
