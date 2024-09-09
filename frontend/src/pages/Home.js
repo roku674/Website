@@ -56,7 +56,7 @@ const Home = () => {
                 </Grid>
                 <Grid item xs={10} md={11}>
                   <Typography variant="body1" className="text-light-blue">
-                    I enjoy playing video games such as League of Legends and World of Warcraft. I also love watching historical fiction, fantasy, and science fiction TV & movies. My favorite foods are Korean BBQ and Fried Okra, and my favorite color is Cyan. I'm a mallet percussionist. Most importantly I am a follower of the teachings of Christ.
+                    I enjoy playing video games such as League of Legends and World of Warcraft. I also love watching historical fiction, fantasy, and science fiction TV & movies. My favorite foods are Korean BBQ and Fried Okra, and my favorite color is Cyan. I'm a mallet percussionist. Most importantly I am a follower of the teachings of Christ. That being said I prefer to spend Sundays volunteering to adequetely live out the word of Christ and if not donate in my absence .
                   </Typography>
                 </Grid>
               </Grid>
@@ -99,6 +99,23 @@ const Home = () => {
                   <img src="/pictures/cashapp-icon.png" alt="CashApp" />
                 </Link>
               </Box>
+            </Box>
+          </Grid>
+
+          {/* Footer with donation link */}
+          <Grid item xs={12}>
+            <Box mt={4} className="footer">
+              <Typography variant="body2" align="center">
+                If you'd like to donate to the charity I contribute to, visit{' '}
+                <Link href="https://www.berich.org" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="/pictures/berich-2019-website-logo.png"
+                    alt="Be Rich Charity"
+                    className="charity-logo"
+                  />
+                  berich.org
+                </Link>
+              </Typography>
             </Box>
           </Grid>
 
