@@ -68,7 +68,7 @@ const Home = () => {
                     Cyan. I'm a mallet percussionist. Most importantly I am a
                     follower of the teachings of Christ. That being said I
                     prefer to spend Sundays volunteering to adequetely live out
-                    the word of Christ and if not donate in my absence .
+                    the word of Christ and if not donate in my absence.
                   </Typography>
                 </Grid>
               </Grid>
@@ -109,32 +109,36 @@ const Home = () => {
             </Box>
           </Grid>
 
-{/* Footer with donation link styled like other bubbles */}
-<Grid item xs={12} md={8}>
-  <Box className="bubble flex-start mb-4 p-3" display="flex" flexDirection="column" alignItems="center">
-    {/* Donation text with larger font */}
-    <Typography variant="h6" className="center-text">
-      If you'd like to donate to the charity I contribute to, visit
-    </Typography>
+          {/* Footer with donation link styled like other bubbles */}
+          <Grid item xs={12} md={8}>
+            <Box
+              className="bubble flex-start mb-4 p-3"
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+            >
+              {/* Donation text with larger font */}
+              <Typography variant="h6" className="center-text">
+                If you'd like to donate to the charity I contribute to, visit
+              </Typography>
 
-    {/* Centered logo below the text */}
-    <Box mt={2}>
-      <Link
-        href="https://www.berich.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/pictures/berich-2019-website-logo.png"
-          alt="Be Rich Charity"
-          className="charity-logo"
-          style={{ width: '350px', height: 'auto' }}
-        />
-      </Link>
-    </Box>
-  </Box>
-</Grid>
-
+              {/* Centered logo below the text */}
+              <Box mt={2}>
+                <Link
+                  href="https://www.berich.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/pictures/berich-2019-website-logo.png"
+                    alt="Be Rich Charity"
+                    className="charity-logo"
+                    style={{ width: "350px", height: "auto" }}
+                  />
+                </Link>
+              </Box>
+            </Box>
+          </Grid>
 
           {/* Donation Links */}
           <Grid item xs={12} md={8}>
@@ -152,6 +156,7 @@ const Home = () => {
                   rel="noopener noreferrer"
                 >
                   <img src="pictures/paypal-icon.png" alt="PayPal" />
+                  <span style={{ fontSize: "0.6em" }}></span>
                 </Link>
                 <Link
                   href="https://cash.app/$AnimalDander"
@@ -159,6 +164,8 @@ const Home = () => {
                   rel="noopener noreferrer"
                 >
                   <img src="/pictures/cashapp-icon.png" alt="CashApp" />
+                  <span style={{ fontSize: "0.6em" }}></span>
+
                 </Link>
               </Box>
             </Box>
