@@ -23,18 +23,19 @@ const Home = () => {
           </Grid>
 
           {/* Personal Description with images */}
+          {/* Georgia Southern University Image and Text */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-2 p-3">
-              <Grid container alignItems="center">
-                {/* Georgia Southern University Image and Text */}
-                <Grid item xs={2} md={1} className="mr-2">
+              <Grid container direction="column" alignItems="center">
+                <Grid item>
                   <img
                     src="/pictures/gsu.png"
                     alt="Georgia Southern University"
                     className="image-box"
+                    style={{ width: "350px", height: "auto" }}
                   />
                 </Grid>
-                <Grid item xs={10} md={11}>
+                <Grid item>
                   <Typography variant="body1" className="text-light-blue">
                     Hi, I'm Alexander Fields, a software engineer with a passion
                     for backend development but also skilled in full-stack
@@ -78,15 +79,16 @@ const Home = () => {
           {/* Vibraphone Image and Text */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-4 p-3">
-              <Grid container alignItems="center">
-                <Grid item xs={2} md={1} className="mr-2">
+              <Grid container direction="column" alignItems="center">
+                <Grid item>
                   <img
                     src="/pictures/vibe.png"
                     alt="Vibraphone"
                     className="vibe-image"
+                    style={{ width: "150px", height: "auto" }}
                   />
                 </Grid>
-                <Grid item xs={10} md={11}>
+                <Grid item>
                   <Typography variant="body1" className="text-light-blue">
                     My computer is doo doo even though I'm a developer lol. I'm
                     on an Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz, 3401 Mhz, 4
