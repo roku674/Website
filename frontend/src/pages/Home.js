@@ -23,18 +23,19 @@ const Home = () => {
           </Grid>
 
           {/* Personal Description with images */}
+          {/* Georgia Southern University Image and Text */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-2 p-3">
-              <Grid container alignItems="center">
-                {/* Georgia Southern University Image and Text */}
-                <Grid item xs={2} md={1} className="mr-2">
+              <Grid container direction="column" alignItems="center">
+                <Grid item>
                   <img
                     src="/pictures/gsu.png"
                     alt="Georgia Southern University"
                     className="image-box"
+                    style={{ width: "350px", height: "auto" }}
                   />
                 </Grid>
-                <Grid item xs={10} md={11}>
+                <Grid item>
                   <Typography variant="body1" className="text-light-blue">
                     Hi, I'm Alexander Fields, a software engineer with a passion
                     for backend development but also skilled in full-stack
@@ -68,7 +69,7 @@ const Home = () => {
                     Cyan. I'm a mallet percussionist. Most importantly I am a
                     follower of the teachings of Christ. That being said I
                     prefer to spend Sundays volunteering to adequetely live out
-                    the word of Christ and if not donate in my absence .
+                    the word of Christ and if not donate in my absence.
                   </Typography>
                 </Grid>
               </Grid>
@@ -78,15 +79,16 @@ const Home = () => {
           {/* Vibraphone Image and Text */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-4 p-3">
-              <Grid container alignItems="center">
-                <Grid item xs={2} md={1} className="mr-2">
+              <Grid container direction="column" alignItems="center">
+                <Grid item>
                   <img
                     src="/pictures/vibe.png"
                     alt="Vibraphone"
                     className="vibe-image"
+                    style={{ width: "150px", height: "auto" }}
                   />
                 </Grid>
-                <Grid item xs={10} md={11}>
+                <Grid item>
                   <Typography variant="body1" className="text-light-blue">
                     My computer is doo doo even though I'm a developer lol. I'm
                     on an Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz, 3401 Mhz, 4
@@ -109,32 +111,36 @@ const Home = () => {
             </Box>
           </Grid>
 
-{/* Footer with donation link styled like other bubbles */}
-<Grid item xs={12} md={8}>
-  <Box className="bubble flex-start mb-4 p-3" display="flex" flexDirection="column" alignItems="center">
-    {/* Donation text with larger font */}
-    <Typography variant="h6" className="center-text">
-      If you'd like to donate to the charity I contribute to, visit
-    </Typography>
+          {/* Footer with donation link styled like other bubbles */}
+          <Grid item xs={12} md={8}>
+            <Box
+              className="bubble flex-start mb-4 p-3"
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+            >
+              {/* Donation text with larger font */}
+              <Typography variant="h6" className="center-text">
+                If you'd like to donate to the charity I contribute to, visit
+              </Typography>
 
-    {/* Centered logo below the text */}
-    <Box mt={2}>
-      <Link
-        href="https://www.berich.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/pictures/berich-2019-website-logo.png"
-          alt="Be Rich Charity"
-          className="charity-logo"
-          style={{ width: '350px', height: 'auto' }}
-        />
-      </Link>
-    </Box>
-  </Box>
-</Grid>
-
+              {/* Centered logo below the text */}
+              <Box mt={2}>
+                <Link
+                  href="https://www.berich.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/pictures/berich-2019-website-logo.png"
+                    alt="Be Rich Charity"
+                    className="charity-logo"
+                    style={{ width: "350px", height: "auto" }}
+                  />
+                </Link>
+              </Box>
+            </Box>
+          </Grid>
 
           {/* Donation Links */}
           <Grid item xs={12} md={8}>
@@ -152,6 +158,7 @@ const Home = () => {
                   rel="noopener noreferrer"
                 >
                   <img src="pictures/paypal-icon.png" alt="PayPal" />
+                  <span style={{ fontSize: "0.6em" }}></span>
                 </Link>
                 <Link
                   href="https://cash.app/$AnimalDander"
@@ -159,6 +166,8 @@ const Home = () => {
                   rel="noopener noreferrer"
                 >
                   <img src="/pictures/cashapp-icon.png" alt="CashApp" />
+                  <span style={{ fontSize: "0.6em" }}></span>
+
                 </Link>
               </Box>
             </Box>
