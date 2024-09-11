@@ -93,12 +93,15 @@ a:hover {
   color: #ffffff;
   padding: 16px; /* Ensure padding doesn't cause overflow */
   max-width: 100%; /* Prevent content from exceeding screen width */
+  height: auto;
 }
 
 .container {
   padding: 16px; /* Ensure padding doesn't cause overflow */
   max-width: 100%; /* Prevent content from exceeding screen width */
   box-sizing: border-box;
+  height: auto;
+
 }
 
 img {

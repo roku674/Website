@@ -108,7 +108,7 @@ const Experience = () => {
         {/* Personal Project at Perilous Games */}
         <Box className="bubble">
           <Typography variant="h5" align="center" gutterBottom>
-            <a href="https://perilousgames.com" target="_blank" rel="noopener noreferrer" className="experience-link">Perilous Games</a> | Personal Project
+           Personal Project | <a href="https://perilousgames.com" target="_blank" rel="noopener noreferrer" className="experience-link">Perilous Games</a> 
           </Typography>
           <List>
             <ListItem>
