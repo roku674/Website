@@ -101,7 +101,7 @@ a:hover {
   max-width: 100%; /* Prevent content from exceeding screen width */
   box-sizing: border-box;
   height: auto;
-
+  width: 100%;
 }
 
 img {
@@ -339,6 +339,7 @@ img {
 .w3-container,
 .w3-panel {
   padding: 0.01em 16px;
+  width: 100%;
 }
 
 /* Colors */
