@@ -93,6 +93,16 @@ const Projects = () => {
               }
             />
           </ListItem>
+
+          <ListItem>
+            <ListItemText
+              primary={
+                <>
+                    If you have a project in mind and would like to enlist my help do not hesitate to reach out!
+                </>
+              }
+            />
+          </ListItem>
         </List>
       </Box>
     </Container>
