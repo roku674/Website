@@ -112,7 +112,7 @@ const Experience = () => {
           </Typography>
           <List>
             <ListItem>
-              <ListItemText primary="Developed a free-to-play Massive Multiplayer Online Role-Playing game called Ad Astra." />
+              <ListItemText primary="Developed a free-to-play Massive Multiplayer Online Role-Playing game called Ad Astra Imperium." />
             </ListItem>
             <ListItem>
               <ListItemText primary="Formed a corporation, Perilous Games, Ltd., to hold the copyrights for the game." />
@@ -121,7 +121,7 @@ const Experience = () => {
               <ListItemText primary="Utilized Unity, Blender, and AutoCAD for design, with code stored in GitHub." />
             </ListItem>
             <ListItem>
-              <ListItemText primary="Developed code using C#, C++, PHP, and SQL, hosted on an Amazon EC2 instance." />
+              <ListItemText primary="Developed code using C#, C++ and SQL, hosted on an Amazon EC2 instance." />
             </ListItem>
           </List>
         </Box>
