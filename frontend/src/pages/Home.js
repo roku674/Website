@@ -94,7 +94,7 @@ const Home = () => {
                     be fair if it can't run on a bad computer then its probably
                     not good code! I'm on an Intel(R) Core(TM) i7-6700 CPU @
                     3.40GHz, 3401 Mhz, 4 Core(s), 8 Logical Processor(s), 16
-                    Gigs or ram NVIDIA GeForce GTX 960 for my GPU. I'm currently
+                    Gigs of ram NVIDIA GeForce GTX 960 for my GPU. I'm currently
                     saving up for an all-new machine, but it's over 2k and will
                     be water-cooled :D. Check out the build I want to make{" "}
                     <Link
