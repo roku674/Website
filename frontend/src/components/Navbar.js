@@ -25,6 +25,9 @@ const Navbar = () => {
       <ListItem button component={Link} to="/experience" onClick={handleDrawerToggle}>
         <ListItemText primary="Experience" />
       </ListItem>
+      <ListItem button component={Link} to="/personality" onClick={handleDrawerToggle}>
+        <ListItemText primary="Personality" />
+      </ListItem>
       <ListItem button component={Link} to="/projects" onClick={handleDrawerToggle}>
         <ListItemText primary="Projects" />
       </ListItem>
@@ -46,6 +49,7 @@ const Navbar = () => {
             <Button color="inherit" component={Link} to="/bots">Bots</Button>
             <Button color="inherit" component={Link} to="/contact">Contact</Button>
             <Button color="inherit" component={Link} to="/experience">Experience</Button>
+            <Button color="inherit" component={Link} to="/personality">Personality</Button>
             <Button color="inherit" component={Link} to="/projects">Projects</Button>
             <Button color="inherit" component={Link} to="/tools">Tools</Button>
           </div>
