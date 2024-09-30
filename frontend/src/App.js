@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer'; 
 import Home from './pages/Home';
 import Experience from './pages/Experience';
+import Personality from './pages/Personality';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Bots from './pages/Bots';
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/personality" element={<Personality />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/bots" element={<Bots />} />

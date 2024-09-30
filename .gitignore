@@ -9,3 +9,4 @@ frontend/.env
 backend/package-lock.json
 proxy/package-lock.json
 package-lock.json
+/node_modules
