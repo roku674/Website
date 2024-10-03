@@ -48,7 +48,7 @@ const Personality = () => {
                     <br></br>
                     <br></br>
                     If you haven't gathered already i'm a nerd/dork. I like to have fun, but if it's work mode I 
-                    get pretty serious and keep everything logical. According to the personality test below
+                    get pretty serious and keep everything logical. I enjoy puzzle games and all around problem solving. According to the personality test below
                     I'm Analytical, Considerate, and Supportive. 
                   </Typography>
                 </Grid>
