@@ -62,7 +62,7 @@ const Personality = () => {
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-4 p-3">
               <Typography variant="h6" gutterBottom>
-                My DiSC Personality in Detail (PDF) (The self-assessment tools
+                My DISC Personality in Detail (PDF) (The self-assessment tools
                 are designed for use in personnel management in businesses. A
                 DISC assessment helps to identify workstyle preferences,
                 determines how someone would interact with others, and provides
