@@ -34,22 +34,24 @@ const Personality = () => {
                 </Grid>
                 <br></br>
                 <Grid item>
-                  <Typography variant="body1" >
+                  <Typography variant="body1">
                     {/* Placeholder for you to fill with text later */}
-                    Child of God Alexander the Engineer of Software; Master of Scrum, Bachelor
-                    of Science in Computer Science & Computer Security of Georgia Southern University; 
-                    Homage to House of Fields, son of Radiology
-                    Technician Alonzo the adopted; Veteraned Warrior of the
-                    United States Army. Thy father is a Loving Husband to
-                    Engineer of Civilizatons and Breaker of Glass Ceilings Margo
-                    the Maiden of House Cheatham, thyself art Second
-                    to Depart thy Mother's womb, but First to Carry thy Father's
-                    Name Fields.
+                    Child of God Alexander the Engineer of Software; Master of
+                    Scrum, Bachelor of Science in Computer Science & Computer
+                    Security of Georgia Southern University; Homage to House of
+                    Fields, son of Radiology Technician Alonzo the adopted;
+                    Veteraned Warrior of the United States Army. Thy father is a
+                    Loving Husband to Engineer of Civilizatons and Breaker of
+                    Glass Ceilings Margo the Maiden of House Cheatham, thyself
+                    art Second to Depart thy Mother's womb, but First to Carry
+                    thy Father's Name Fields.
                     <br></br>
                     <br></br>
-                    If you haven't gathered already i'm a nerd/dork. I like to have fun, but if it's work mode I 
-                    get pretty serious and keep everything logical. I enjoy puzzle games and all around problem solving. According to the personality test below
-                    I'm Analytical, Considerate, and Supportive. 
+                    If you haven't gathered already i'm a nerd/dork. I like to
+                    have fun, but if it's work mode I get pretty serious and
+                    keep everything logical. I enjoy puzzle games and all around
+                    problem solving. According to the personality test below I'm
+                    Analytical, Considerate, and Supportive.
                   </Typography>
                 </Grid>
               </Grid>
@@ -60,8 +62,11 @@ const Personality = () => {
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-4 p-3">
               <Typography variant="h6" gutterBottom>
-                My DiSC Personality in Detail (PDF)
-            (The self-assessment tools are designed for use in personnel management in businesses. A DISC assessment helps to identify workstyle preferences, determines how someone would interact with others, and provides insight on work habits.)
+                My DiSC Personality in Detail (PDF) (The self-assessment tools
+                are designed for use in personnel management in businesses. A
+                DISC assessment helps to identify workstyle preferences,
+                determines how someone would interact with others, and provides
+                insight on work habits.)
               </Typography>
               <iframe
                 src="/files/Alexander-Fields.pdf"
