@@ -126,6 +126,36 @@ const Experience = () => {
           </List>
         </Box>
 
+         {/* Personal Project at Mandala Consulting */}
+         <Box className="bubble">
+          <Typography variant="h5" align="center" gutterBottom>
+           Personal Project | <a href="https://mandalaconsulting.org" target="_blank" rel="noopener noreferrer" className="experience-link">Mandala Consulting (org)</a> | <a href="https://mandalaconsulting.net" target="_blank" rel="noopener noreferrer" className="experience-link">Mandala Consulting (net)</a>
+          </Typography>
+          <List>
+            <ListItem>
+              <ListItemText primary="Developed Open Source Code available on both Github and Nuget" />
+            </ListItem>
+            <ListItem>
+              <a href="https://www.nuget.org/packages/MandalaConsulting.APIMiddlewares/" target="_blank" rel="noopener noreferrer" className="experience-link">API Middlewares</a> 
+            </ListItem>
+            <ListItem>
+              <a href="https://www.nuget.org/packages/MandalaConsulting.Logging/" target="_blank" rel="noopener noreferrer" className="experience-link">Logging</a> 
+            </ListItem>
+            <ListItem>
+              <a href="https://www.nuget.org/packages/MandalaConsulting.Memory/" target="_blank" rel="noopener noreferrer" className="experience-link">Memory</a> 
+            </ListItem>
+            <ListItem>
+              <a href="https://www.nuget.org/packages/MandalaConsulting.Objects/" target="_blank" rel="noopener noreferrer" className="experience-link">Objects</a> 
+            </ListItem>
+            <ListItem>
+              <a href="https://www.nuget.org/packages/MandalaConsulting.Objects.API/" target="_blank" rel="noopener noreferrer" className="experience-link">Objects for APIs</a> 
+            </ListItem>
+            <ListItem>
+              <a href="https://www.nuget.org/packages/MandalaConsulting.Repository.Mongo/" target="_blank" rel="noopener noreferrer" className="experience-link">Mongo Repository</a> 
+            </ListItem>
+          </List>
+        </Box>
+
         {/* Internship Experience at Arcadis U.S. */}
         <Box className="bubble">
           <Typography variant="h5" align="center" gutterBottom>
