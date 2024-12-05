@@ -98,7 +98,7 @@ const Home = () => {
                     saving up for an all-new machine, but it's over 2k and will
                     be water-cooled :D. Check out the build I want to make{" "}
                     <Link
-                      href="https://www.microcenter.com/site/content/custom-pc-builder.aspx?load=67c25be5-4a3a-40c1-bcde-083be28d9fd0"
+                      href="https://www.microcenter.com/site/content/custom-pc-builder.aspx?load=94055b00-8cee-4250-9b1f-75c912ff7788"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#fde047" }}
