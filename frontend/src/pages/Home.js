@@ -95,8 +95,7 @@ const Home = () => {
                     not good code! I'm on an Intel(R) Core(TM) i7-6700 CPU @
                     3.40GHz, 3401 Mhz, 4 Core(s), 8 Logical Processor(s), 16
                     Gigs of ram NVIDIA GeForce GTX 960 for my GPU. I'm currently
-                    saving up for an all-new machine, but it's over 3k not including the gpu
-                    (i'll pull the GPU from my old build) and the new one will
+                    saving up for an all-new machine, but it's over 4k and the new one will
                     be water-cooled :D. Check out the build I want to make{" "}
                     <Link
                       href="https://www.microcenter.com/site/content/custom-pc-builder.aspx?load=94055b00-8cee-4250-9b1f-75c912ff7788"
