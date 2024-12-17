@@ -40,7 +40,7 @@ const Personality = () => {
                     Scrum, Bachelor of Science in Computer Science & Computer
                     Security of Georgia Southern University; Homage to House of
                     Fields, son of Radiology Technician Alonzo the adopted;
-                    Veteraned Warrior of the United States Army. Thy father is a
+                    Veteraned Warrior of the United States Navy. Thy father is a
                     Loving Husband to Engineer of Civilizatons and Breaker of
                     Glass Ceilings Margo the Maiden of House Cheatham, thyself
                     art Second to Depart thy Mother's womb, but First to Carry
