@@ -31,12 +31,14 @@ const Personality = () => {
               </Typography>*/}
               <Grid container direction="column" alignItems="center">
                 <Grid item>
-                  <img
-                    src="/pictures/family.jpg"
-                    alt="Family"
-                    className="image-box"
-                    style={{ width: "350px", height: "auto" }}
-                  />
+                  <a href="http://eliteportraitphotography.com/" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="/pictures/family.jpg"
+                      alt="Family"
+                      className="image-box"
+                      style={{ width: "350px", height: "auto" }}
+                    />
+                  </a>
                 </Grid>
                 <br></br>
                 <Grid item>
