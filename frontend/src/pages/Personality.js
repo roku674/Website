@@ -16,7 +16,13 @@ const Personality = () => {
             />
           </Grid>
 
-          {/* Personality Text Section */}
+          {/* Header*/}
+          <Grid item>
+            <Typography variant="h4" gutterBottom className="center-text">
+              "A Knight shall never fight for a King that will Not fight for him and his Men" - Alexander Fields
+            </Typography>
+          </Grid>
+
           {/* Personality Text Section */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-2 p-3">
