@@ -111,16 +111,6 @@ const Personality = () => {
             </Box>
           </Grid>
 
-          {/* DnD Stats Section */}
-          <Grid item xs={12} md={8}>
-            <Paper elevation={3} style={{ padding: "16px" }}>
-              <Typography variant="h5" gutterBottom align="center">
-                DnD Character Stats
-              </Typography>
-              <Bar data={data} options={options} />
-            </Paper>
-          </Grid>
-
           {/* PDF Display Section */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-4 p-3">
@@ -139,6 +129,17 @@ const Personality = () => {
               ></iframe>
             </Box>
           </Grid>
+
+         {/* DnD Stats Section */}
+         <Grid item xs={12} md={8}>
+            <Paper elevation={3} style={{ padding: "16px" }}>
+              <Typography variant="h5" gutterBottom align="center">
+                DnD Character Stats IRL
+              </Typography>
+              <Bar data={data} options={options} />
+            </Paper>
+          </Grid>
+
         </Grid>
       </Box>
     </Container>
