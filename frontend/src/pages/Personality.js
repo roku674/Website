@@ -1,7 +1,55 @@
 import React from "react";
-import { Container, Typography, Box, Grid } from "@mui/material";
+import { Container, Typography, Box, Grid, Paper } from "@mui/material";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Personality = () => {
+  const data = {
+    labels: ["Strength (STR)", "Dexterity (DEX)", "Constitution (CON)", "Faith (FAI) ","Intelligence (INT)", "Wisdom (WIS)", "Charisma (CHA)"],
+    datasets: [
+      {
+        label: "Ability Score",
+        data: [8, 10, 12, 20, 16, 14, 10],
+        backgroundColor: "steelblue",
+        borderColor: "black",
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: true,
+        text: "DnD Character Stats",
+        font: {
+          size: 16,
+          weight: "bold",
+        },
+      },
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        max: 20,
+      },
+    },
+  };
+
   return (
     <Container>
       <Box mt={4}>
@@ -16,19 +64,71 @@ const Personality = () => {
             />
           </Grid>
 
-          {/* Header*/}
+          {/* Header */}
           <Grid item>
             <Typography variant="h4" gutterBottom className="center-text">
               "A Knight shall never fight for a King that will Not fight for him and his Men" - Alexander Fields
             </Typography>
           </Grid>
+        
+        {/* DnD Stats Section */}
+<Grid item xs={12} md={8}>
+  <Paper
+    elevation={3}
+    style={{
+      padding: "16px",
+      backgroundColor: "#0078d4",
+      color: "white",
+    }}
+  >
+    <Typography
+      variant="h5"
+      gutterBottom
+      align="center"
+      style={{ color: "white" }}
+    >
+      My IRL Stats
+    </Typography>
+    <Bar
+      data={{
+        ...data,
+        datasets: [
+          {
+            ...data.datasets[0],
+            backgroundColor: "rgba(255, 255, 255, 0.7)", // Lightened white for contrast
+            borderColor: "white",
+            hoverBackgroundColor: "rgba(255, 255, 255, 0.9)", // Slightly stronger hover
+          },
+        ],
+      }}
+      options={{
+        ...options,
+        plugins: {
+          ...options.plugins,
+          title: {
+            ...options.plugins.title,
+            color: "white", // Chart title in white
+          },
+        },
+        scales: {
+          x: {
+            ...options.scales.x,
+            ticks: { color: "white" }, // White x-axis labels
+          },
+          y: {
+            beginAtZero: true,
+            max: 20,
+            ticks: { color: "white" }, // White y-axis labels
+          },
+        },
+      }}
+    />
+  </Paper>
+</Grid>
 
           {/* Personality Text Section */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-2 p-3">
-              {/*<Typography variant="h5" gutterBottom>
-                My Personality
-              </Typography>*/}
               <Grid container direction="column" alignItems="center">
                 <Grid item>
                   <a href="http://eliteportraitphotography.com/" target="_blank" rel="noopener noreferrer">
@@ -40,10 +140,10 @@ const Personality = () => {
                     />
                   </a>
                 </Grid>
-                <br></br>
+                <br />
                 <Grid item>
                   <Typography variant="body1">
-                    {/* Placeholder for you to fill with text later */}
+                    {/* Your narrative here */}
                     Child of God Alexander the Engineer of Software; Master of
                     Scrum, Bachelor of Science in Computer Science & Computer
                     Security of Georgia Southern University; Homage to House of
@@ -84,6 +184,7 @@ const Personality = () => {
               ></iframe>
             </Box>
           </Grid>
+
         </Grid>
       </Box>
     </Container>
