@@ -77,7 +77,7 @@ const Personality = () => {
     elevation={3}
     style={{
       padding: "16px",
-      backgroundColor: "#1e947c",
+      backgroundColor: "#0078d4",
       color: "white",
     }}
   >
@@ -87,7 +87,7 @@ const Personality = () => {
       align="center"
       style={{ color: "white" }}
     >
-      DnD Character Stats IRL
+      My IRL Stats
     </Typography>
     <Bar
       data={{
