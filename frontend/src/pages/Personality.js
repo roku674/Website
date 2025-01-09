@@ -70,6 +70,61 @@ const Personality = () => {
               "A Knight shall never fight for a King that will Not fight for him and his Men" - Alexander Fields
             </Typography>
           </Grid>
+        
+        {/* DnD Stats Section */}
+<Grid item xs={12} md={8}>
+  <Paper
+    elevation={3}
+    style={{
+      padding: "16px",
+      backgroundColor: "#1e947c",
+      color: "white",
+    }}
+  >
+    <Typography
+      variant="h5"
+      gutterBottom
+      align="center"
+      style={{ color: "white" }}
+    >
+      DnD Character Stats IRL
+    </Typography>
+    <Bar
+      data={{
+        ...data,
+        datasets: [
+          {
+            ...data.datasets[0],
+            backgroundColor: "rgba(255, 255, 255, 0.7)", // Lightened white for contrast
+            borderColor: "white",
+            hoverBackgroundColor: "rgba(255, 255, 255, 0.9)", // Slightly stronger hover
+          },
+        ],
+      }}
+      options={{
+        ...options,
+        plugins: {
+          ...options.plugins,
+          title: {
+            ...options.plugins.title,
+            color: "white", // Chart title in white
+          },
+        },
+        scales: {
+          x: {
+            ...options.scales.x,
+            ticks: { color: "white" }, // White x-axis labels
+          },
+          y: {
+            beginAtZero: true,
+            max: 20,
+            ticks: { color: "white" }, // White y-axis labels
+          },
+        },
+      }}
+    />
+  </Paper>
+</Grid>
 
           {/* Personality Text Section */}
           <Grid item xs={12} md={8}>
@@ -128,16 +183,6 @@ const Personality = () => {
                 title="Alexander Fields Personality"
               ></iframe>
             </Box>
-          </Grid>
-
-         {/* DnD Stats Section */}
-         <Grid item xs={12} md={8}>
-            <Paper elevation={3} style={{ padding: "16px" }}>
-              <Typography variant="h5" gutterBottom align="center">
-                DnD Character Stats IRL
-              </Typography>
-              <Bar data={data} options={options} />
-            </Paper>
           </Grid>
 
         </Grid>
