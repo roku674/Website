@@ -15,7 +15,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const Personality = () => {
   const data = {
-    labels: ["Strength (STR)", "Dexterity (DEX)", "Constitution (CON)", "Faith (FAI) ","Intelligence (INT)", "Wisdom (WIS)", "Charisma (CHA)", Luck (LUC)],
+    labels: ["Strength (STR)", "Dexterity (DEX)", "Constitution (CON)", "Faith (FAI) ","Intelligence (INT)", "Wisdom (WIS)", "Charisma (CHA)", "Luck (LUC)"],
     datasets: [
       {
         label: "Ability Score",
