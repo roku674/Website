@@ -619,3 +619,16 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
+
+.image-box {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto; /* Centering on small screens */
+}
+
+@media (min-width: 600px) {
+  .image-box {
+    margin: 0; /* Default alignment for larger screens */
+  }
+}
