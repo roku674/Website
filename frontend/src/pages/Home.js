@@ -63,13 +63,14 @@ const Home = () => {
                 <Grid item xs={10} md={11}>
                   <Typography variant="body1" className="text-light-blue">
                     I enjoy playing video games such as League of Legends and
-                    World of Warcraft. I also love watching historical fiction,
-                    fantasy, and science fiction TV & movies. My favorite foods
-                    are Korean BBQ and Fried Okra, and my favorite color is
-                    Cyan. I'm a mallet percussionist. Most importantly I am a
-                    follower of the teachings of Christ. That being said I
-                    prefer to spend Sundays volunteering to adequetely live out
-                    the word of Christ and if not donate in my absence.
+                    World of Warcraft. I very recently got into Magic the
+                    Gathering. I also love watching historical fiction, fantasy,
+                    and science fiction TV & movies. My favorite foods are
+                    Korean BBQ and Fried Okra, and my favorite color is Cyan.
+                    I'm a mallet percussionist. Most importantly I am a follower
+                    of the teachings of Christ. That being said I prefer to
+                    spend Sundays volunteering to adequetely live out the word
+                    of Christ and if not donate in my absence.
                   </Typography>
                 </Grid>
               </Grid>
