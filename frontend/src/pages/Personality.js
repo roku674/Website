@@ -106,13 +106,13 @@ const Personality = () => {
                 My IRL Stats
               </Typography>
               <Grid item xs={2} md={1} className="mr-2">
-              <img
-                src="/pictures/DnDMe.jpg"
-                alt="Me as a DnD character"
-                className="image-box"
-                style={{ width: "150px", height: "auto" }}
-              />
-            </Grid>
+                <img
+                  src="/pictures/DnDMe.jpg"
+                  alt="Me as a DnD character"
+                  className="image-box"
+                  style={{ width: "300px", height: "auto" }}
+                />
+              </Grid>
               <Bar
                 data={{
                   ...data,
