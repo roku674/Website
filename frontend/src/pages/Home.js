@@ -190,7 +190,7 @@ const Home = () => {
                       <img
                         src="pictures/paypal-icon.png"
                         alt="PayPal"
-                        style={{ width: "50px" }}
+                        style={{ width: "100px" }}
                       />
                     </Link>
                     <Link
@@ -201,7 +201,7 @@ const Home = () => {
                       <img
                         src="/pictures/cashapp-icon.png"
                         alt="CashApp"
-                        style={{ width: "50px" }}
+                        style={{ width: "100px" }}
                       />
                     </Link>
                   </Box>
