@@ -159,7 +159,7 @@ const Home = () => {
                 Support Me{" "}
                 <span style={{ fontSize: "0.6em" }}>
                   (Support the needy before me though, i'm serious my computer
-                  and magic the gather cards can wait)
+                  and magic the gathering cards can wait)
                 </span>
               </Typography>
               <Box className="support-icons">
