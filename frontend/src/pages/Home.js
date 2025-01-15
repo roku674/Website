@@ -150,6 +150,8 @@ const Home = () => {
             <Box className="bubble">
               <Typography variant="h6" gutterBottom className="center-text">
                 Support Me{" "}
+                <br></br>
+                <br></br>
                 <span style={{ fontSize: "0.6em" }}>
                   (Support the needy before me though, i'm serious my computer
                   and magic the gathering cards can wait)
