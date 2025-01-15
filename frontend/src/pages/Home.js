@@ -160,6 +160,7 @@ const Home = () => {
                 src="/pictures/MtGMe.jpg"
                 alt="Me as a mage"
                 className="image-box"
+                style={{ width: "100px", height: "auto" }}
               />
             </Grid>
               <Box className="support-icons">

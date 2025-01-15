@@ -110,6 +110,7 @@ const Personality = () => {
                 src="/pictures/DnDMe.jpg"
                 alt="Me as a DnD character"
                 className="image-box"
+                style={{ width: "150px", height: "auto" }}
               />
             </Grid>
               <Bar
