@@ -161,13 +161,7 @@ const Home = () => {
                 alignItems="center"
                 spacing={2}
               >
-                <Grid
-                  item
-                  xs={12}
-                  sm={3}
-                  justifyContent="center"
-                  alignItems="center"
-                >
+                <Grid item xs={12} sm={3}>
                   <img
                     src="/pictures/MtGMe.jpg"
                     alt="Me as a mage"
