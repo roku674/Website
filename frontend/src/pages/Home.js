@@ -151,8 +151,8 @@ const Home = () => {
               <Typography variant="h6" gutterBottom className="center-text">
                 Support Me <br></br>
                 <span style={{ fontSize: "0.6em" }}>
-                  (Support the needy before me though, I'm serious—my computer
-                  and Magic: The Gathering cards can wait)
+                  (Support the needy before me though, I'm serious my computer
+                  and Magic The Gathering cards can wait.)
                 </span>
               </Typography>
               <Grid
