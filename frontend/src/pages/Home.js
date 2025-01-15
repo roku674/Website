@@ -147,13 +147,6 @@ const Home = () => {
 
           {/* Donation Links */}
           <Grid item xs={12} md={8}>
-            <Grid item xs={2} md={1} className="mr-2">
-              <img
-                src="/pictures/MtGMe.jpg"
-                alt="Me as a mage"
-                className="image-box"
-              />
-            </Grid>
             <Box className="bubble">
               <Typography variant="h6" gutterBottom className="center-text">
                 Support Me{" "}
@@ -162,6 +155,13 @@ const Home = () => {
                   and magic the gathering cards can wait)
                 </span>
               </Typography>
+              <Grid item xs={2} md={1} className="mr-2">
+              <img
+                src="/pictures/MtGMe.jpg"
+                alt="Me as a mage"
+                className="image-box"
+              />
+            </Grid>
               <Box className="support-icons">
                 <Link
                   href="https://www.paypal.com/paypalme/adastrapericlum"

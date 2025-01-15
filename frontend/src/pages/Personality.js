@@ -89,13 +89,6 @@ const Personality = () => {
 
           {/* DnD Stats Section */}
           <Grid item xs={12} md={8}>
-            <Grid item xs={2} md={1} className="mr-2">
-              <img
-                src="/pictures/DnDMe.jpg"
-                alt="Me as a DnD character"
-                className="image-box"
-              />
-            </Grid>
             <Paper
               elevation={3}
               style={{
@@ -112,6 +105,13 @@ const Personality = () => {
               >
                 My IRL Stats
               </Typography>
+              <Grid item xs={2} md={1} className="mr-2">
+              <img
+                src="/pictures/DnDMe.jpg"
+                alt="Me as a DnD character"
+                className="image-box"
+              />
+            </Grid>
               <Bar
                 data={{
                   ...data,
