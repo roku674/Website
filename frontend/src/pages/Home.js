@@ -63,13 +63,14 @@ const Home = () => {
                 <Grid item xs={10} md={11}>
                   <Typography variant="body1" className="text-light-blue">
                     I enjoy playing video games such as League of Legends and
-                    World of Warcraft. I also love watching historical fiction,
-                    fantasy, and science fiction TV & movies. My favorite foods
-                    are Korean BBQ and Fried Okra, and my favorite color is
-                    Cyan. I'm a mallet percussionist. Most importantly I am a
-                    follower of the teachings of Christ. That being said I
-                    prefer to spend Sundays volunteering to adequetely live out
-                    the word of Christ and if not donate in my absence.
+                    World of Warcraft. I very recently got into Magic the
+                    Gathering. I also love watching historical fiction, fantasy,
+                    and science fiction TV & movies. My favorite foods are
+                    Korean BBQ and Fried Okra, and my favorite color is Cyan.
+                    I'm a mallet percussionist. Most importantly I am a follower
+                    of the teachings of Christ. That being said I prefer to
+                    spend Sundays volunteering to adequetely live out the word
+                    of Christ and if not donate in my absence.
                   </Typography>
                 </Grid>
               </Grid>
@@ -95,8 +96,9 @@ const Home = () => {
                     not good code! I'm on an Intel(R) Core(TM) i7-6700 CPU @
                     3.40GHz, 3401 Mhz, 4 Core(s), 8 Logical Processor(s), 16
                     Gigs of ram NVIDIA GeForce GTX 960 for my GPU. I'm currently
-                    saving up for an all-new machine, but it's over 4k and the new one will
-                    be water-cooled :D. Check out the build I want to make{" "}
+                    saving up for an all-new machine, but it's over 4k and the
+                    new one will be water-cooled :D. Check out the build I want
+                    to make{" "}
                     <Link
                       href="https://www.microcenter.com/site/content/custom-pc-builder.aspx?load=94055b00-8cee-4250-9b1f-75c912ff7788"
                       target="_blank"
@@ -145,31 +147,66 @@ const Home = () => {
 
           {/* Donation Links */}
           <Grid item xs={12} md={8}>
-            <Box className="bubble">
+            <Box className="bubble" style={{ textAlign: "center" }}>
               <Typography variant="h6" gutterBottom className="center-text">
-                Support Me{" "}
+                Support Me <br></br>
                 <span style={{ fontSize: "0.6em" }}>
-                  (Support the needy before me though)
+                  (Support the needy before me though, I'm serious—my computer
+                  and Magic: The Gathering cards can wait)
                 </span>
               </Typography>
-              <Box className="support-icons">
-                <Link
-                  href="https://www.paypal.com/paypalme/adastrapericlum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="pictures/paypal-icon.png" alt="PayPal" />
-                  <span style={{ fontSize: "0.6em" }}></span>
-                </Link>
-                <Link
-                  href="https://cash.app/$AnimalDander"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="/pictures/cashapp-icon.png" alt="CashApp" />
-                  <span style={{ fontSize: "0.6em" }}></span>
-                </Link>
-              </Box>
+              <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                spacing={2}
+              >
+                <Grid item xs={12} sm={3}>
+                  <img
+                    src="/pictures/MtGMe.jpg"
+                    alt="Me as a mage"
+                    className="image-box"
+                    style={{
+                      width: "200px",
+                      height: "auto",
+                      borderRadius: "8px",
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Box
+                    className="support-icons"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      gap: "16px",
+                    }}
+                  >
+                    <Link
+                      href="https://www.paypal.com/paypalme/adastrapericlum"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="pictures/paypal-icon.png"
+                        alt="PayPal"
+                        style={{ width: "100px" }}
+                      />
+                    </Link>
+                    <Link
+                      href="https://cash.app/$AnimalDander"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/pictures/cashapp-icon.png"
+                        alt="CashApp"
+                        style={{ width: "100px" }}
+                      />
+                    </Link>
+                  </Box>
+                </Grid>
+              </Grid>
             </Box>
           </Grid>
 
