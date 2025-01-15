@@ -95,8 +95,9 @@ const Home = () => {
                     not good code! I'm on an Intel(R) Core(TM) i7-6700 CPU @
                     3.40GHz, 3401 Mhz, 4 Core(s), 8 Logical Processor(s), 16
                     Gigs of ram NVIDIA GeForce GTX 960 for my GPU. I'm currently
-                    saving up for an all-new machine, but it's over 4k and the new one will
-                    be water-cooled :D. Check out the build I want to make{" "}
+                    saving up for an all-new machine, but it's over 4k and the
+                    new one will be water-cooled :D. Check out the build I want
+                    to make{" "}
                     <Link
                       href="https://www.microcenter.com/site/content/custom-pc-builder.aspx?load=94055b00-8cee-4250-9b1f-75c912ff7788"
                       target="_blank"
@@ -145,11 +146,19 @@ const Home = () => {
 
           {/* Donation Links */}
           <Grid item xs={12} md={8}>
+            <Grid item xs={2} md={1} className="mr-2">
+              <img
+                src="/pictures/MtGMe.jpg"
+                alt="Me as a mage"
+                className="image-box"
+              />
+            </Grid>
             <Box className="bubble">
               <Typography variant="h6" gutterBottom className="center-text">
                 Support Me{" "}
                 <span style={{ fontSize: "0.6em" }}>
-                  (Support the needy before me though)
+                  (Support the needy before me though, i'm serious my computer
+                  and magic the gather cards can wait)
                 </span>
               </Typography>
               <Box className="support-icons">
