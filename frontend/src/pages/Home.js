@@ -95,9 +95,12 @@ const Home = () => {
                     be fair if it can't run on a bad computer then its probably
                     not good code! I'm on an Intel(R) Core(TM) i7-6700 CPU @
                     3.40GHz, 3401 Mhz, 4 Core(s), 8 Logical Processor(s), 16
-                    Gigs of ram NVIDIA GeForce GTX 960 for my GPU. I'm currently
-                    saving up for an all-new machine, but it's over 4k and the
-                    new one will be water-cooled :D. Check out the build I want
+                    Gigs of ram NVIDIA GeForce GTX 960 for my GPU. My computer 
+                    Essentially can't run well unless its on Windows 7. It takes
+                    forever on Windows 10 and can't upgrade to Windows 11. That 
+                    being said I'm currently saving up for an all-new machine, 
+                    but it's over 4k and the new one will be water-cooled :D. 
+                    Check out the build I want
                     to make{" "}
                     <Link
                       href="https://www.microcenter.com/site/content/custom-pc-builder.aspx?load=94055b00-8cee-4250-9b1f-75c912ff7788"
