@@ -162,7 +162,7 @@ const Home = () => {
                 spacing={2}
               >
                 <Grid item xs={12} sm={3}>
-  <a
+  <Link
     href="https://www.amazon.com/hz/wishlist/ls/U8P0HF8N7V2?ref_=wl_share"
     target="_blank"
     rel="noopener noreferrer"
@@ -177,7 +177,7 @@ const Home = () => {
         borderRadius: "8px",
       }}
     />
-  </a>
+  </Link>
 </Grid>
 
                 <Grid item xs={12} sm={6}>
