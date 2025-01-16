@@ -11,11 +11,26 @@ import {
   Legend,
 } from "chart.js";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const Personality = () => {
   const data = {
-    labels: ["Strength (STR)", "Dexterity (DEX)", "Constitution (CON)", "Faith (FAI) ","Intelligence (INT)", "Wisdom (WIS)", "Charisma (CHA)"],
+    labels: [
+      "Strength (STR)",
+      "Dexterity (DEX)",
+      "Constitution (CON)",
+      "Faith (FAI) ",
+      "Intelligence (INT)",
+      "Wisdom (WIS)",
+      "Charisma (CHA)",
+    ],
     datasets: [
       {
         label: "Ability Score",
@@ -67,71 +82,93 @@ const Personality = () => {
           {/* Header */}
           <Grid item>
             <Typography variant="h4" gutterBottom className="center-text">
-              "A Knight shall never fight for a King that will Not fight for him and his Men" - Alexander Fields
+              "A Knight shall never fight for a King that will Not fight for him
+              and his Men" - Alexander Fields
             </Typography>
           </Grid>
-        
-        {/* DnD Stats Section */}
-<Grid item xs={12} md={8}>
-  <Paper
-    elevation={3}
-    style={{
-      padding: "16px",
-      backgroundColor: "#0078d4",
-      color: "white",
-    }}
-  >
-    <Typography
-      variant="h5"
-      gutterBottom
-      align="center"
-      style={{ color: "white" }}
-    >
-      My IRL Stats
-    </Typography>
-    <Bar
-      data={{
-        ...data,
-        datasets: [
-          {
-            ...data.datasets[0],
-            backgroundColor: "rgba(255, 255, 255, 0.7)", // Lightened white for contrast
-            borderColor: "white",
-            hoverBackgroundColor: "rgba(255, 255, 255, 0.9)", // Slightly stronger hover
-          },
-        ],
-      }}
-      options={{
-        ...options,
-        plugins: {
-          ...options.plugins,
-          title: {
-            ...options.plugins.title,
-            color: "white", // Chart title in white
-          },
-        },
-        scales: {
-          x: {
-            ...options.scales.x,
-            ticks: { color: "white" }, // White x-axis labels
-          },
-          y: {
-            beginAtZero: true,
-            max: 20,
-            ticks: { color: "white" }, // White y-axis labels
-          },
-        },
-      }}
-    />
-  </Paper>
-</Grid>
+
+          {/* DnD Stats Section */}
+          <Grid item xs={12} md={8}>
+            <Paper
+              elevation={3}
+              style={{
+                padding: "16px",
+                backgroundColor: "#0078d4",
+                color: "white",
+              }}
+            >
+              <Typography
+                variant="h5"
+                gutterBottom
+                align="center"
+                style={{ color: "white" }}
+              >
+                My IRL Stats
+              </Typography>
+              <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                style={{ marginBottom: "16px" }}
+              >
+                <img
+                  src="/pictures/DnDMe.jpg"
+                  alt="Me as a DnD character"
+                  className="image-box"
+                  style={{
+                    width: "300px",
+                    height: "auto",
+                    borderRadius: "8px",
+                  }}
+                />
+              </Grid>
+              <Bar
+                data={{
+                  ...data,
+                  datasets: [
+                    {
+                      ...data.datasets[0],
+                      backgroundColor: "rgba(255, 255, 255, 0.7)", // Lightened white for contrast
+                      borderColor: "white",
+                      hoverBackgroundColor: "rgba(255, 255, 255, 0.9)", // Slightly stronger hover
+                    },
+                  ],
+                }}
+                options={{
+                  ...options,
+                  plugins: {
+                    ...options.plugins,
+                    title: {
+                      ...options.plugins.title,
+                      color: "white", // Chart title in white
+                    },
+                  },
+                  scales: {
+                    x: {
+                      ...options.scales.x,
+                      ticks: { color: "white" }, // White x-axis labels
+                    },
+                    y: {
+                      beginAtZero: true,
+                      max: 20,
+                      ticks: { color: "white" }, // White y-axis labels
+                    },
+                  },
+                }}
+              />
+            </Paper>
+          </Grid>
 
           {/* Personality Text Section */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-2 p-3">
               <Grid container direction="column" alignItems="center">
                 <Grid item>
-                  <a href="http://eliteportraitphotography.com/" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="http://eliteportraitphotography.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="/pictures/family.jpg"
                       alt="Family"
@@ -184,7 +221,6 @@ const Personality = () => {
               ></iframe>
             </Box>
           </Grid>
-
         </Grid>
       </Box>
     </Container>
