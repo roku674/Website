@@ -1,5 +1,3 @@
-# Dockerfile
-
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine AS build
 
@@ -11,10 +9,10 @@ COPY frontend/package*.json ./frontend/
 COPY backend/package*.json ./backend/
 COPY proxy/package*.json ./proxy/
 
-# Install dependencies for all services
-RUN cd frontend && npm install && cd ..
-RUN cd backend && npm install && cd ..
-RUN cd proxy && npm install && cd ..
+# Install dependencies for all services, using --legacy-peer-deps to resolve conflicts
+RUN cd frontend && npm install --legacy-peer-deps && cd ..
+RUN cd backend && npm install --legacy-peer-deps && cd ..
+RUN cd proxy && npm install --legacy-peer-deps && cd ..
 
 # Copy all the files for each service
 COPY frontend ./frontend
@@ -47,6 +45,7 @@ ENV PROXY_PORT=$PROXY_PORT
 ENV MONGODB_CLUSTER_LOGS=$MONGODB_CLUSTER_LOGS
 ENV MONGODB_DATABASE_TRADER=$MONGODB_DATABASE_TRADER
 
+# Build the frontend
 RUN cd frontend && npm run build && cd ..
 
 # Use a lightweight Node server to serve the React application
