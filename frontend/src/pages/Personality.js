@@ -181,7 +181,7 @@ const Personality = () => {
                 <Grid item>
                   <Typography variant="body1">
                     {/* Your narrative here */}
-                    Child of God Alexander the Engineer of Software; Master of
+                    Child of God Alexander Africanus, the Engineer of Software; Master of
                     Scrum, Bachelor of Science in Computer Science & Computer
                     Security of Georgia Southern University; Homage to House of
                     Fields, son of Radiology Technician Alonzo the adopted;
