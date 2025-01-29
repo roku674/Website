@@ -193,8 +193,7 @@ const Personality = () => {
                 align="center"
                 style={{ color: "white" }}
               >
-                Chastity, Temperance, Charity, Diligence, Patience, Kindness,
-                Humility
+                Humility, Charity, Chastity, Kindness, Temperance, Patience, Diligence,            
               </Typography>
             </Paper>
           </Grid>
