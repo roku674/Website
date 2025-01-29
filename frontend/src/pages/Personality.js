@@ -156,6 +156,45 @@ const Personality = () => {
                   },
                 }}
               />
+
+              {/* 7 Deadly Sins and 7 Virtues Section */}
+              <Typography
+                variant="h6"
+                gutterBottom
+                align="center"
+                style={{ color: "white", marginTop: "16px" }}
+              >
+                7 Deadly Sins:
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ color: "white", marginBottom: "16px" }}
+              >
+                <span style={{ textDecoration: "line-through" }}>Pride</span>,{" "}
+                <span style={{ textDecoration: "line-through" }}>Greed</span>,{" "}
+                <span style={{ textDecoration: "line-through" }}>Lust</span>,{" "}
+                <span style={{ textDecoration: "line-through" }}>Envy</span>,{" "}
+                <span style={{ textDecoration: "line-through" }}>Gluttony</span>
+                , <span style={{ textDecoration: "line-through" }}>Wrath</span>,{" "}
+                <span style={{ textDecoration: "line-through" }}>Sloth</span>
+              </Typography>
+
+              <Typography
+                variant="h6"
+                gutterBottom
+                align="center"
+                style={{ color: "white" }}
+              >
+                7 Virtues:
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ color: "white" }}
+              >
+                Humility, Charity, Chastity, Kindness, Temperance, Patience, Diligence,            
+              </Typography>
             </Paper>
           </Grid>
 
@@ -181,15 +220,16 @@ const Personality = () => {
                 <Grid item>
                   <Typography variant="body1">
                     {/* My narrative here */}
-                    Child of God Alexander Africanus Americanus, the Engineer of Software; Master of
-                    Scrum, Bachelor of Science in Computer Science & Computer
-                    Security from Georgia Southern University; Homage to House of
-                    Fields, son of Radiology Technician Alonzo the adopted;
-                    Veteraned Warrior of the United States Navy. Thy father is a
-                    Loving Husband to Engineer of Civilizatons and Breaker of
-                    Glass Ceilings Margo the Maiden of House Cheatham, thyself
-                    art Second to Depart thy Mother's womb, but First to Carry
-                    thy Father's Name Fields.
+                    Child of God Alexander Africanus Americanus, the Engineer of
+                    Software; Master of Scrum, Bachelor of Science in Computer
+                    Science & Computer Security from Georgia Southern
+                    University; Homage to House of Fields, son of Radiology
+                    Technician Alonzo the adopted; Veteraned Warrior of the
+                    United States Navy. Thy father is a Loving Husband to
+                    Engineer of Civilizatons and Breaker of Glass Ceilings Margo
+                    the Maiden of House Cheatham, thyself art Second to Depart
+                    thy Mother's womb, but First to Carry thy Father's Name
+                    Fields.
                     <br></br>
                     <br></br>
                     If you haven't gathered already i'm a nerd/dork. I like to
