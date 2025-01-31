@@ -166,35 +166,66 @@ const Personality = () => {
               >
                 7 Deadly Sins:
               </Typography>
-              <Typography
-                variant="body1"
-                align="center"
-                style={{ color: "white", marginBottom: "16px" }}
+              <Grid
+                container
+                spacing={2}
+                style={{
+                  textAlign: "center",
+                  color: "white",
+                  marginBottom: "16px",
+                }}
               >
-                <span style={{ textDecoration: "line-through" }}>Pride</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Greed</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Lust</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Envy</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Gluttony</span>
-                , <span style={{ textDecoration: "line-through" }}>Wrath</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Sloth</span>
-              </Typography>
-
-              <Typography
-                variant="h6"
-                gutterBottom
-                align="center"
-                style={{ color: "white" }}
-              >
-                7 Virtues:
-              </Typography>
-              <Typography
-                variant="body1"
-                align="center"
-                style={{ color: "white" }}
-              >
-                Humility, Charity, Chastity, Kindness, Temperance, Patience, Diligence            
-              </Typography>
+                <Grid item xs={6}>
+                  <Typography variant="h6" gutterBottom>
+                    7 Deadly Sins:
+                  </Typography>
+                  <Typography variant="body1">
+                    <span style={{ textDecoration: "line-through" }}>
+                      Pride
+                    </span>
+                    <br />
+                    <span style={{ textDecoration: "line-through" }}>
+                      Greed
+                    </span>
+                    <br />
+                    <span style={{ textDecoration: "line-through" }}>Lust</span>
+                    <br />
+                    <span style={{ textDecoration: "line-through" }}>Envy</span>
+                    <br />
+                    <span style={{ textDecoration: "line-through" }}>
+                      Gluttony
+                    </span>
+                    <br />
+                    <span style={{ textDecoration: "line-through" }}>
+                      Wrath
+                    </span>
+                    <br />
+                    <span style={{ textDecoration: "line-through" }}>
+                      Sloth
+                    </span>
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="h6" gutterBottom>
+                    7 Virtues:
+                  </Typography>
+                  <Typography variant="body1">
+                    Humility
+                    <br />
+                    Charity
+                    <br />
+                    Chastity
+                    <br />
+                    Kindness
+                    <br />
+                    Temperance
+                    <br />
+                    Patience
+                    <br />
+                    Diligence
+                  </Typography>
+                </Grid>
+              </Grid>
             </Paper>
           </Grid>
 
