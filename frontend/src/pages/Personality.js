@@ -181,7 +181,7 @@ const Personality = () => {
                 >
                   <Grid item xs={12} sm={6}>
                     <Typography variant="h6" gutterBottom>
-                      7 Deadly Sins:
+                      Sins:
                     </Typography>
                     <Typography variant="body1">
                       <span style={{ textDecoration: "line-through" }}>
@@ -215,7 +215,7 @@ const Personality = () => {
                   </Grid>
                   <Grid item xs={12} sm={6}>
                     <Typography variant="h6" gutterBottom>
-                      7 Virtues:
+                      Virtues:
                     </Typography>
                     <Typography variant="body1">
                       Humility
