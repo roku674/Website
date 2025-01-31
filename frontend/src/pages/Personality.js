@@ -86,116 +86,156 @@ const Personality = () => {
               and his Men" - Alexander Fields
             </Typography>
           </Grid>
-
+            
           {/* DnD Stats Section */}
-          <Grid item xs={12} md={8}>
-            <Paper
-              elevation={3}
-              style={{
-                padding: "16px",
-                backgroundColor: "#0078d4",
-                color: "white",
-              }}
-            >
-              <Typography
-                variant="h5"
-                gutterBottom
-                align="center"
-                style={{ color: "white" }}
+          <Grid container justifyContent="center" style={{ padding: "16px" }}>
+            <Grid item xs={12} md={10} lg={8}>
+              <Paper
+                elevation={3}
+                style={{
+                  padding: "24px",
+                  backgroundColor: "#0078d4",
+                  color: "white",
+                  borderRadius: "12px",
+                }}
               >
-                My IRL Stats
-              </Typography>
-              <Grid
-                container
-                justifyContent="center"
-                alignItems="center"
-                style={{ marginBottom: "16px" }}
-              >
-                <img
-                  src="/pictures/DnDMe.jpg"
-                  alt="Me as a DnD character"
-                  className="image-box"
-                  style={{
-                    width: "300px",
-                    height: "auto",
-                    borderRadius: "8px",
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  align="center"
+                  style={{ color: "white" }}
+                >
+                  My IRL Stats
+                </Typography>
+                <Grid
+                  container
+                  justifyContent="center"
+                  alignItems="center"
+                  style={{ marginBottom: "16px" }}
+                >
+                  <img
+                    src="/pictures/DnDMe.jpg"
+                    alt="Me as a DnD character"
+                    className="image-box"
+                    style={{
+                      maxWidth: "100%",
+                      width: "300px",
+                      height: "auto",
+                      borderRadius: "8px",
+                    }}
+                  />
+                </Grid>
+                <Bar
+                  data={{
+                    ...data,
+                    datasets: [
+                      {
+                        ...data.datasets[0],
+                        backgroundColor: "rgba(255, 255, 255, 0.7)",
+                        borderColor: "white",
+                        hoverBackgroundColor: "rgba(255, 255, 255, 0.9)",
+                      },
+                    ],
+                  }}
+                  options={{
+                    ...options,
+                    plugins: {
+                      ...options.plugins,
+                      title: {
+                        ...options.plugins.title,
+                        color: "white",
+                      },
+                    },
+                    scales: {
+                      x: {
+                        ...options.scales.x,
+                        ticks: { color: "white" },
+                      },
+                      y: {
+                        beginAtZero: true,
+                        max: 20,
+                        ticks: { color: "white" },
+                      },
+                    },
                   }}
                 />
-              </Grid>
-              <Bar
-                data={{
-                  ...data,
-                  datasets: [
-                    {
-                      ...data.datasets[0],
-                      backgroundColor: "rgba(255, 255, 255, 0.7)", // Lightened white for contrast
-                      borderColor: "white",
-                      hoverBackgroundColor: "rgba(255, 255, 255, 0.9)", // Slightly stronger hover
-                    },
-                  ],
-                }}
-                options={{
-                  ...options,
-                  plugins: {
-                    ...options.plugins,
-                    title: {
-                      ...options.plugins.title,
-                      color: "white", // Chart title in white
-                    },
-                  },
-                  scales: {
-                    x: {
-                      ...options.scales.x,
-                      ticks: { color: "white" }, // White x-axis labels
-                    },
-                    y: {
-                      beginAtZero: true,
-                      max: 20,
-                      ticks: { color: "white" }, // White y-axis labels
-                    },
-                  },
-                }}
-              />
 
-              {/* 7 Deadly Sins and 7 Virtues Section */}
-              <Typography
-                variant="h6"
-                gutterBottom
-                align="center"
-                style={{ color: "white", marginTop: "16px" }}
-              >
-                7 Deadly Sins:
-              </Typography>
-              <Typography
-                variant="body1"
-                align="center"
-                style={{ color: "white", marginBottom: "16px" }}
-              >
-                <span style={{ textDecoration: "line-through" }}>Pride</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Greed</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Lust</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Envy</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Gluttony</span>
-                , <span style={{ textDecoration: "line-through" }}>Wrath</span>,{" "}
-                <span style={{ textDecoration: "line-through" }}>Sloth</span>
-              </Typography>
-
-              <Typography
-                variant="h6"
-                gutterBottom
-                align="center"
-                style={{ color: "white" }}
-              >
-                7 Virtues:
-              </Typography>
-              <Typography
-                variant="body1"
-                align="center"
-                style={{ color: "white" }}
-              >
-                Humility, Charity, Chastity, Kindness, Temperance, Patience, Diligence            
-              </Typography>
-            </Paper>
+                {/* 7 Deadly Sins and 7 Virtues Section */}
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  align="center"
+                  style={{ color: "white", marginTop: "16px" }}
+                >
+                  7 Deadly Sins:
+                </Typography>
+                <Grid
+                  container
+                  spacing={2}
+                  justifyContent="center"
+                  style={{
+                    textAlign: "center",
+                    color: "white",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <Grid item xs={12} sm={6}>
+                    <Typography variant="h6" gutterBottom>
+                      Sins:
+                    </Typography>
+                    <Typography variant="body1">
+                      <span style={{ textDecoration: "line-through" }}>
+                        Pride
+                      </span>
+                      <br />
+                      <span style={{ textDecoration: "line-through" }}>
+                        Greed
+                      </span>
+                      <br />
+                      <span style={{ textDecoration: "line-through" }}>
+                        Lust
+                      </span>
+                      <br />
+                      <span style={{ textDecoration: "line-through" }}>
+                        Envy
+                      </span>
+                      <br />
+                      <span style={{ textDecoration: "line-through" }}>
+                        Gluttony
+                      </span>
+                      <br />
+                      <span style={{ textDecoration: "line-through" }}>
+                        Wrath
+                      </span>
+                      <br />
+                      <span style={{ textDecoration: "line-through" }}>
+                        Sloth
+                      </span>
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <Typography variant="h6" gutterBottom>
+                      Virtues:
+                    </Typography>
+                    <Typography variant="body1">
+                      Humility
+                      <br />
+                      Charity
+                      <br />
+                      Chastity
+                      <br />
+                      Kindness
+                      <br />
+                      Temperance
+                      <br />
+                      Patience
+                      <br />
+                      Diligence
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Paper>
+            </Grid>
           </Grid>
 
           {/* Personality Text Section */}
