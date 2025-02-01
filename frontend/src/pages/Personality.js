@@ -279,6 +279,7 @@ const Personality = () => {
                     Analytical, Considerate, Supportive and Cautious. That being said, I am deeply offput by dishonesty and appreciative of honesty.
 
 <br></br>
+<br></br>
 
 "When the hard truth becomes too much to bare, lies and silence slip on the mask of care." - Alexander Fields 
                   </Typography>
