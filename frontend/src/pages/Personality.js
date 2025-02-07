@@ -282,6 +282,8 @@ const Personality = () => {
 <br></br>
 
 "When the hard truth becomes too much to bare, lies and silence slip on the mask of care." - Alexander Fields 
+
+Apparently I defeated Abbadon in a dream, but he said he'll be back...
                   </Typography>
                 </Grid>
               </Grid>
