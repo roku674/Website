@@ -83,10 +83,11 @@ const Personality = () => {
           <Grid item>
             <Typography variant="h4" gutterBottom className="center-text">
               "A Knight shall never fight for a King that will Not fight for him
-              and his Men" - The Okra Devouring Intellectual, Alexander Lord of Software of House Fields
+              and his Men" - The Okra Devouring Intellectual, Alexander Lord of
+              Software of House Fields
             </Typography>
           </Grid>
-            
+
           {/* DnD Stats Section */}
           <Grid container justifyContent="center" style={{ padding: "16px" }}>
             <Grid item xs={12} md={10} lg={8}>
@@ -276,24 +277,22 @@ const Personality = () => {
                     have fun, but if it's work mode I get pretty serious and
                     keep everything logical. I enjoy puzzle games and all around
                     problem solving. According to the personality test below I'm
-                    Analytical, Considerate, Supportive and Cautious. That being said, I am deeply offput by dishonesty and appreciative of honesty.
-
-<br></br>
-<br></br>
-
-"When the hard truth becomes too much to bare, lies and silence slip on the mask of care." - Alexander Fields 
-
-<br></br>
-<br></br>
-
-Apparently I defeated Abbadon in a dream, but he said he'll be back...
+                    Analytical, Considerate, Supportive and Cautious. That being
+                    said, I am deeply offput by dishonesty and appreciative of
+                    honesty.
+                    <br></br>
+                    <br></br>
+                    "When the hard truth becomes too much to bare, lies and
+                    silence slip on the mask of care." - Alexander Fields
+                    <br></br>
+                    <br></br>
+                    Apparently I defeated Abbadon in a dream, but he said he'll
+                    be back...
                   </Typography>
                 </Grid>
               </Grid>
             </Box>
           </Grid>
-
-          {/* PDF Display Section */}
           <Grid item xs={12} md={8}>
             <Box className="bubble flex-start mb-4 p-3">
               <Typography variant="h6" gutterBottom>
@@ -303,6 +302,12 @@ Apparently I defeated Abbadon in a dream, but he said he'll be back...
                 determines how someone would interact with others, and provides
                 insight on work habits.)
               </Typography>
+            </Box>
+          </Grid>
+
+          {/* PDF Display Section */}
+          <Grid item xs={12} md={8}>
+            <Box className="bubble flex-start mb-4 p-3">
               <iframe
                 src="/files/Alexander-Fields.pdf"
                 width="100%"
