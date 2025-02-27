@@ -83,7 +83,7 @@ const Personality = () => {
           <Grid item>
             <Typography variant="h4" gutterBottom className="center-text">
               "A Knight shall never fight for a King that will Not fight for him
-              and his Men" - The Okra Devouring Intellectual, Alexander Lord of
+              and his Men" - The Okra Devouring Nerd, Alexander Lord of
               Software of House Fields
             </Typography>
           </Grid>
