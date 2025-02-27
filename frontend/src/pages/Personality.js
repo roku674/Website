@@ -293,6 +293,7 @@ Apparently I defeated Abbadon in a dream, but he said he'll be back...
             </Box>
           </Grid>
           <Grid item xs={12} md=[8]>
+            <Box className="bubble flex-start mb-4 p-3">
               <Typography variant="h6" gutterBottom>
                 My DISC Personality in Detail (PDF) (The self-assessment tools
                 are designed for use in personnel management in businesses. A
@@ -300,6 +301,7 @@ Apparently I defeated Abbadon in a dream, but he said he'll be back...
                 determines how someone would interact with others, and provides
                 insight on work habits.)
               </Typography>
+            </Box>
             </Grid>
           {/* PDF Display Section */}
           <Grid item xs={12} md={8}>
