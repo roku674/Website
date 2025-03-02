@@ -264,7 +264,7 @@ const Personality = () => {
                     Child of God Alexander Africanus Americanus, the Engineer of
                     Software; Master of Scrum, Bachelor of Science in Computer
                     Science & Computer Security from Georgia Southern
-                    University; Homage to House of Fields, son of Radiology
+                    University; Homage to House Fields, son of Radiology
                     Technician Alonzo the adopted; Veteraned Warrior of the
                     United States Navy. Thy father is a Loving Husband to
                     Engineer of Civilizatons and Breaker of Glass Ceilings Margo
