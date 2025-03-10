@@ -19,20 +19,20 @@ const Navbar = () => {
       <ListItem button component={Link} to="/experience" onClick={handleDrawerToggle}>
         <ListItemText primary="Experience" />
       </ListItem>
-	  <ListItem button component={Link} to="/projects" onClick={handleDrawerToggle}>
-        <ListItemText primary="Projects" />
-      </ListItem>
-	  <ListItem button component={Link} to="/tools" onClick={handleDrawerToggle}>
-        <ListItemText primary="Tools" />
-      </ListItem>
-	  <ListItem button component={Link} to="/bots" onClick={handleDrawerToggle}>
-        <ListItemText primary="Bots" />
-      </ListItem>
-	  <ListItem button component={Link} to="/products" onClick={handleDrawerToggle}>
+      <ListItem button component={Link} to="/products" onClick={handleDrawerToggle}>
         <ListItemText primary="Products" />
       </ListItem>
-	 <ListItem button component={Link} to="/services" onClick={handleDrawerToggle}>
+      <ListItem button component={Link} to="/services" onClick={handleDrawerToggle}>
         <ListItemText primary="Services" />
+      </ListItem>
+      <ListItem button component={Link} to="/projects" onClick={handleDrawerToggle}>
+        <ListItemText primary="Projects" />
+      </ListItem>
+      <ListItem button component={Link} to="/tools" onClick={handleDrawerToggle}>
+        <ListItemText primary="Tools" />
+      </ListItem>
+      <ListItem button component={Link} to="/bots" onClick={handleDrawerToggle}>
+        <ListItemText primary="Bots" />
       </ListItem>
       <ListItem button component={Link} to="/personality" onClick={handleDrawerToggle}>
         <ListItemText primary="Personality" />
@@ -53,18 +53,18 @@ const Navbar = () => {
           <div className="navbar-desktop">
             <Button color="inherit" component={Link} to="/">Home</Button>
             <Button color="inherit" component={Link} to="/experience">Experience</Button>
+            <Button color="inherit" component={Link} to="/products">Products</Button>
+            <Button color="inherit" component={Link} to="/services">Services</Button>
             <Button color="inherit" component={Link} to="/projects">Projects</Button>
             <Button color="inherit" component={Link} to="/tools">Tools</Button>
-			<Button color="inherit" component={Link} to="/bots">Bots</Button>
-			<Button color="inherit" component={Link} to="/products">Products</Button>
-			<Button color="inherit" component={Link} to="/services">Services</Button>
-            <Button color="inherit" component={Link} to="/personality">Personality</Button>			
+            <Button color="inherit" component={Link} to="/bots">Bots</Button>
+            <Button color="inherit" component={Link} to="/personality">Personality</Button>
             <Button color="inherit" component={Link} to="/contact">Contact</Button>
           </div>
-          <IconButton 
-            color="inherit" 
-            edge="end" 
-            onClick={handleDrawerToggle} 
+          <IconButton
+            color="inherit"
+            edge="end"
+            onClick={handleDrawerToggle}
             className="navbar-mobile">
             <MenuIcon />
           </IconButton>
