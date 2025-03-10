@@ -37,12 +37,14 @@ const Contact = () => {
               perilousgames.com
             </Link>
           </ListItem>
+          /**
           <ListItem>
             <ListItemText primary="Kingdom Of God: " />
             <Link href="https://www.kingdomofgod.online" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>
               kingdomofgod.online
             </Link>
           </ListItem>
+          */
         </List>
       </Box>
     </Container>
