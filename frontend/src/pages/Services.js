@@ -5,20 +5,36 @@ import { Link as RouterLink } from 'react-router-dom'; // Internal navigation
 
 const Services = () => {
   return (
-    <Container>
-      <Box mt={4} className="bubble">
+    <Container maxWidth="md">
+      <Box 
+        mt={4} 
+        className="bubble"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        textAlign="center"
+      >
         <Typography variant="h4" gutterBottom>Services</Typography>
         <List>
           {/* Video Games Link (External) */}
-          <ListItem>
-            <Link href="https://www.perilousgames.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>
+          <ListItem style={{ display: "flex", justifyContent: "center" }}>
+            <Link 
+              href="https://www.perilousgames.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: '#fde047', fontSize: "1.2rem" }}
+            >
               Perilous Games
             </Link>
           </ListItem>
 
           {/* Coding Tutoring Link (Internal) */}
-          <ListItem>
-            <Link component={RouterLink} to="/Contact" style={{ color: '#fde047' }}>
+          <ListItem style={{ display: "flex", justifyContent: "center" }}>
+            <Link 
+              component={RouterLink} 
+              to="/Contact" 
+              style={{ color: '#fde047', fontSize: "1.2rem" }}
+            >
               Coding Tutoring
             </Link>
           </ListItem>
