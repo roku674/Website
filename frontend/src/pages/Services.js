@@ -1,7 +1,7 @@
 // src/pages/Services.js
 import React from 'react';
-import { Container, Typography, Box, Link, List, ListItem, ListItemText } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom'; 
+import { Container, Typography, Box, Link, List, ListItem } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom'; // Internal navigation
 
 const Services = () => {
   return (
@@ -9,23 +9,18 @@ const Services = () => {
       <Box mt={4} className="bubble">
         <Typography variant="h4" gutterBottom>Services</Typography>
         <List>
+          {/* Video Games Link (External) */}
           <ListItem>
-            <ListItemText
-              primary={
-                <Link href="https://www.perilousgames.com/" target="_blank" rel="noopener noreferrer">
-                  Video Games
-                </Link>
-              }
-            />
+            <Link href="https://www.perilousgames.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>
+              Video Games
+            </Link>
           </ListItem>
+
+          {/* Coding Tutoring Link (Internal) */}
           <ListItem>
-            <ListItemText
-              primary={
-                <Link component={RouterLink} to="/Contact">
-                  Coding Tutoring
-                </Link>
-              }
-            />
+            <Link component={RouterLink} to="/Contact" style={{ color: '#fde047' }}>
+              Coding Tutoring
+            </Link>
           </ListItem>
         </List>
       </Box>
