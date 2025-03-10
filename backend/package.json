@@ -10,9 +10,9 @@
         "backend": "file:",
         "dotenv": "^16.4.7",
         "express": "^4.21.2",
-        "mongoose": "^8.8.3"
+        "mongoose": "^8.12.1"
     },
     "devDependencies": {
-        "nodemon": "^2.0.22"
+        "nodemon": "^3.1.9"
     }
 }
