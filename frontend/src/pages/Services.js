@@ -12,7 +12,7 @@ const Services = () => {
           {/* Video Games Link (External) */}
           <ListItem>
             <Link href="https://www.perilousgames.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#fde047' }}>
-              Video Games
+              Perilous Games
             </Link>
           </ListItem>
 
