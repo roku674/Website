@@ -27,6 +27,17 @@ const Services = () => {
               Perilous Games
             </Link>
           </ListItem>
+		  
+		  {/* Website and app building */}
+          <ListItem style={{ display: "flex", justifyContent: "center" }}>
+            <Link 
+              component={RouterLink} 
+              to="/Contact" 
+              style={{ color: '#fde047', fontSize: "1.2rem" }}
+            >
+              Website & App Building
+            </Link>
+          </ListItem>
 
           {/* Coding Tutoring Link (Internal) */}
           <ListItem style={{ display: "flex", justifyContent: "center" }}>
