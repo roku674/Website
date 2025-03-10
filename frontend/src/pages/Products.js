@@ -6,10 +6,10 @@ const Products = () => {
   return (
     <Container>
       <Box mt={4} className="bubble">
-        <Typography variant="h4" gutterBottom>Products</Typography>
+        <Typography variant="h4" gutterBottom>Products (None Yet)</Typography>
       </Box>
     </Container>
   );
 };
 
-export default Contact;
+export default Products;
