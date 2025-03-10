@@ -50,9 +50,9 @@ const botsData = [
 const BotsPage = () => {
   return (
     <Container maxWidth="md" style={{ marginTop: "20px" }}>
-      <Typography variant="h3" component="h1" gutterBottom>
-        Bots Page
-      </Typography>
+      <Typography variant="h3" component="h1" gutterBottom align="center">
+		Bots Page
+	  </Typography>
       <Grid container spacing={4}>
         {botsData.map((bot) => (
           <Grid item xs={12} sm={6} md={4} key={bot.id}>

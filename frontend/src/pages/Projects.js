@@ -12,8 +12,14 @@ import {
 const Projects = () => {
   return (
     <Container>
-      <Box mt={4} className="bubble">
-        {/* Apply the bubble class here */}
+      <Box 
+        mt={4} 
+        className="bubble"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        textAlign="center"
+      >        {/* Apply the bubble class here */}
         <Typography variant="h4" gutterBottom>
           Projects
         </Typography>
