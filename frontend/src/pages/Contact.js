@@ -5,7 +5,14 @@ import { Container, Typography, Box, Link, List, ListItem, ListItemText } from '
 const Contact = () => {
   return (
     <Container>
-      <Box mt={4} className="bubble"> {/* Apply the bubble class here */}
+      <Box 
+        mt={4} 
+        className="bubble"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        textAlign="center"
+      >
         <Typography variant="h4" gutterBottom>Contact Me</Typography>
         <List>
           <ListItem>
