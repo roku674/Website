@@ -15,6 +15,14 @@ const Products = () => {
       >
         <Typography variant="h4" gutterBottom>Products (None Yet)</Typography>
       </Box>
+          <Typography variant="h6" className="center-text">
+                I'm not a Person/Company that'd ever ask you to donate during
+                a purchase. Companies do that because they want to use your 
+                money for a tax break! Deep down they really don't care about
+                donating. That being said I'll  be taking the profits 
+                from purchases and donating it so don't worry! 
+                You buying my products is automatically donating. 
+              </Typography>      
     </Container>
   );
 };
