@@ -274,12 +274,17 @@ const Personality = () => {
                     <br></br>
                     <br></br>
                     If you haven't gathered already i'm a nerd/dork. I like to
-                    have fun, but if it's work mode I get pretty serious and
+                    have fun, However in a professional compacity I am serious and
                     keep everything logical. I enjoy puzzle games and all around
                     problem solving. According to the personality test below I'm
                     Analytical, Considerate, Supportive and Cautious. That being
-                    said, I am deeply offput by dishonesty and appreciative of
-                    honesty.
+                    said, I have a strong since of duty and loyalty and I am 
+                    deeply offput by dishonesty while extremely appreciative of
+                    honesty. I'm extremely critical of disingenuous behaviour, 
+                    as i'd much rather one hurt my feelings with your words than 
+                    stab me in the back with a dagger. So if you dislike me or 
+                    dislike things that I like/stand for let me know :D and we
+                    can have a healthy discussion about it.
                     <br></br>
                     <br></br>
                     "When the hard truth becomes too much to bare, lies and
