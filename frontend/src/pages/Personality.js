@@ -289,6 +289,10 @@ const Personality = () => {
                     <br></br>
                     "When the hard truth becomes too much to bare, lies and
                     silence slip on the mask of care." - Alexander Fields
+
+ <br></br>
+ <br></br>
+The Lord is my Shepherd and I am his sheep dog 🐕. 
                     <br></br>
                     <br></br>
                     Apparently I defeated Abbadon in a dream, but he said he'll
